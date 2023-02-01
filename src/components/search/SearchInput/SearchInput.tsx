@@ -97,7 +97,7 @@ const SearchInput = forwardRef<SearchInputRef, SearchInputProps>(
                 data-testid={buttonTestId}
               />
             }
-            placeholder="Search everything at the store"
+            placeholder="Busca productos"
             onChange={(e) => setSearchQuery(e.target.value)}
             onSubmit={(term) => {
               const path = formatSearchPath(term)

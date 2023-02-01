@@ -33,6 +33,8 @@ body {
   --fs-color-neutral-5                 : #74808b;
   --fs-color-neutral-6                 : #5d666f;
   --fs-color-neutral-7                 : #171a1c;
+  --fs-color-linio-1                   : #f50;
+
 
   // HIERARCHY
   --fs-color-primary-text              : var(--fs-color-text-inverse);
@@ -50,6 +52,7 @@ body {
   --fs-color-secondary-bkg-light-active: var(--fs-color-secondary-bkg-light);
 
   --fs-color-tertiary-text             : var(--fs-color-link);
+  --fs-color-tertiary-text-linio       : #fff;
   --fs-color-tertiary-bkg              : transparent;
   --fs-color-tertiary-bkg-hover        : var(--fs-color-main-0);
   --fs-color-tertiary-bkg-active       : var(--fs-color-main-1);
@@ -76,6 +79,8 @@ body {
   --fs-color-text-light                : var(--fs-color-neutral-6);
   --fs-color-text-inverse              : var(--fs-color-neutral-0);
   --fs-color-text-display              : var(--fs-color-neutral-7);
+  --fs-color-text-links-linio          : #ddd;
+
 
   --fs-color-focus-ring                : #8db6fa;
   --fs-color-focus-ring-outline        : #8db6fa80;

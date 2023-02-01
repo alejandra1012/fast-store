@@ -8,7 +8,7 @@
   --fs-navlinks-padding-top-notebook             : var(--fs-spacing-1);
   --fs-navlinks-padding-bottom-notebook          : var(--fs-navlinks-padding-top-notebook);
 
-  --fs-navlinks-bkg-color                        : var(--fs-color-body-bkg);
+  --fs-navlinks-bkg-color                        : var(--fs-navbar-bkg-color);
 
   --fs-navlinks-transition-property              : var(--fs-transition-property);
   --fs-navlinks-transition-timing                : var(--fs-transition-timing);
@@ -74,13 +74,14 @@
   @include media(">=notebook") {
     padding-top: var(--fs-navlinks-padding-top-notebook);
     padding-bottom: var(--fs-navlinks-padding-bottom-notebook);
+    border-top: 1px solid #5a5a5a;
 
     [data-fs-navlinks-list] {
       display: flex;
       column-gap: var(--fs-spacing-3);
       padding-left: var(--fs-navlinks-list-padding-left-notebook);
       margin-left: var(--fs-navlinks-list-margin-left-notebook);
-      border-left: var(--fs-navlinks-list-border-left-width-notebook) solid var(--fs-navlinks-list-border-left-color-notebook);
+      // border-left: var(--fs-navlinks-list-border-left-width-notebook) solid var(--fs-navlinks-list-border-left-color-notebook);
     }
 
     [data-fs-navlinks-link] {

@@ -77,8 +77,11 @@
     order: 2;
 
     @include media("<notebook") {
-      display: none;
+      max-width: 35%;
+      order: unset;
+
     }
+
   }
 
   [data-fs-navbar-row] {
@@ -195,10 +198,10 @@
     align-self: stretch;
 
     @include media("<notebook") {
-      padding: var(--fs-spacing-1) 0 var(--fs-spacing-1) var(--fs-spacing-3);
+      // padding: var(--fs-spacing-1) 0 var(--fs-spacing-1) var(--fs-spacing-3);
       margin-right: auto;
       margin-left: var(--fs-spacing-0);
-      border-left: var(--fs-navbar-logo-border-left-width) solid var(--fs-navbar-logo-border-left-color);
+      // border-left: var(--fs-navbar-logo-border-left-width) solid var(--fs-navbar-logo-border-left-color);
     }
   }
 }

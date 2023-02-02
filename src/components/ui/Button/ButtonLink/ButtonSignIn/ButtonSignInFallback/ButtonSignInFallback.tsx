@@ -10,7 +10,7 @@ function ButtonSignInFallback() {
       variant="tertiary"
     >
       <Icon name="User" width={18} height={18} weight="bold" />
-      <span>{'Sign In'}</span>
+      <span>{'Iniciar Sesión'}</span>
     </ButtonLink>
   )
 }

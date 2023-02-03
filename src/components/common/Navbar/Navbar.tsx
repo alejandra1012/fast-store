@@ -6,6 +6,7 @@ import Button, {
   ButtonSignIn,
   ButtonSignInFallback,
 } from 'src/components/ui/Button'
+import ButtonOrders from 'src/components/ui/Button/ButtonLink/ButtonSignIn/ButtonOrders'
 import Icon from 'src/components/ui/Icon'
 import Link from 'src/components/ui/Link'
 import Logo from 'src/components/ui/Logo'
@@ -80,6 +81,7 @@ function Navbar() {
             /> */}
             <Suspense fallback={<ButtonSignInFallback />}>
               <ButtonSignIn />
+              <ButtonOrders />
             </Suspense>
             <CartToggle />
           </div>

@@ -72,8 +72,12 @@
   &[data-fs-link-variant="display"] {
     line-height: var(--fs-link-display-text-line-height);
     color: var(--fs-link-display-text-color);
+    font-size: .8rem;
+    font-weight: 400;
+    text-decoration: none;
+    font-family: arial;
 
-    &:visited { color: var(--fs-link-display-text-color-visited); }
+    // &:visited { color: var(--fs-link-display-text-color-visited); }
   }
 
   &[data-fs-link-variant="inline"] {

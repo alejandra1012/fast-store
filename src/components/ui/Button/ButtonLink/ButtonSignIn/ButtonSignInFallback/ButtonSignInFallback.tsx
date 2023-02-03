@@ -9,7 +9,7 @@ function ButtonSignInFallback() {
       className="text__title-mini"
       variant="tertiary"
     >
-      <Icon name="User" width={18} height={18} weight="bold" />
+      <Icon name="UserLinio" width={32} height={32} />
       <span>{'Iniciar Sesión'}</span>
     </ButtonLink>
   )

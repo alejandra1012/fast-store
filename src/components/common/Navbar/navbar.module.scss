@@ -77,7 +77,7 @@
     order: 2;
 
     @include media("<notebook") {
-      max-width: 35%;
+      max-width: 50%;
       order: unset;
 
     }
@@ -97,11 +97,12 @@
 
     @include media(">=notebook") {
       display: grid;
-      grid-template-columns: 1fr minmax(auto, 37.5rem) 1fr;
+      // grid-template-columns: 1fr minmax(auto, 37.5rem) 1fr 1fr;
+      grid-template-columns: minmax(auto, 5rem) 1fr minmax(auto, 34.5rem) 1fr minmax(auto, 3rem) 1fr 1fr;
     }
 
     [data-fs-navbar-button-menu] {
-      @include media(">=notebook") { display: none; }
+      @include media(">=notebook") { }
     }
   }
 
@@ -199,8 +200,8 @@
 
     @include media("<notebook") {
       // padding: var(--fs-spacing-1) 0 var(--fs-spacing-1) var(--fs-spacing-3);
-      margin-right: auto;
-      margin-left: var(--fs-spacing-0);
+      // margin-right: auto;
+      // margin-left: var(--fs-spacing-0);
       // border-left: var(--fs-navbar-logo-border-left-width) solid var(--fs-navbar-logo-border-left-color);
     }
   }

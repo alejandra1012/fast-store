@@ -281,6 +281,10 @@
     color: var(--fs-button-tertiary-text-color);
     background-color: var(--fs-button-tertiary-bkg-color);
     border: var(--fs-button-border-width) solid var(--fs-button-tertiary-border-color);
+    font-family: arial;
+    font-size: var( --fs-text-size-base );
+    font-weight: 100;
+    white-space: nowrap;
 
     &:hover {
       color: var(--fs-button-tertiary-text-color-hover);

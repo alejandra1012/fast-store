@@ -17,5 +17,6 @@
 
   @include media ("<tablet"){
     background: var(--fs-logo-img-phone) no-repeat;
+    width: var( --fs-logo-width-phone);
   }
 }

@@ -3,7 +3,7 @@ import styles from 'src/components/ui/Button/button.module.scss'
 import Icon from 'src/components/ui/Icon'
 import { useSession } from 'src/sdk/session'
 
-const ButtonSignIn = () => {
+const ButtonOrders = () => {
   const { person } = useSession()
 
   return (
@@ -13,10 +13,10 @@ const ButtonSignIn = () => {
       className={`${styles.fsButton} text__title-mini`}
       variant="tertiary"
     >
-      <Icon name="UserLinio" width={35} height={35} />
-      <span>{person?.id ? 'My Account' : 'Iniciar Sesión'}</span>
+      <Icon name="Truck" width={35} height={35} />
+      <span>{person?.id ? 'My Account' : 'Mis pedidos'}</span>
     </ButtonLink>
   )
 }
 
-export default ButtonSignIn
+export default ButtonOrders

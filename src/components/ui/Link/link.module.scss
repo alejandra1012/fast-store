@@ -79,6 +79,10 @@
 
     // &:visited { color: var(--fs-link-display-text-color-visited); }
   }
+  &[data-fs-link-variant=display]:hover {
+    color: #bbb;
+  }
+
 
   &[data-fs-link-variant="inline"] {
     display: inline-block;

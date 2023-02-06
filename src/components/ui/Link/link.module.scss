@@ -9,6 +9,7 @@
   --fs-link-min-width                  : auto;
   --fs-link-min-height                 : var(--fs-link-min-width);
   --fs-link-padding                    : var(--fs-spacing-2) var(--fs-spacing-0);
+  --fs-link-padding-desktop            : var(--fs-spacing-2) var(--fs-spacing-2);
   --fs-link-border-radius              : var(--fs-border-radius);
 
   --fs-link-text-line-height           : 1.5;
@@ -43,6 +44,11 @@
   // --------------------------------------------------------
   // Structural Styles
   // --------------------------------------------------------
+
+  @include media(">=notebook"){
+  padding: var(--fs-link-padding-desktop);
+
+  }
 
   min-width: var(--fs-link-min-width);
   min-height: var(--fs-link-min-height);

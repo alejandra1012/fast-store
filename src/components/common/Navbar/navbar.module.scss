@@ -98,7 +98,8 @@
     @include media(">=notebook") {
       display: grid;
       // grid-template-columns: 1fr minmax(auto, 37.5rem) 1fr 1fr;
-      grid-template-columns: minmax(auto, 5rem) 1fr minmax(auto, 34.5rem) 1fr minmax(auto, 3rem) 1fr 1fr;
+      grid-template-columns: minmax(auto, 0rem) 1fr minmax(auto, 34.5rem) 1fr minmax(auto, 3rem) 1fr 1fr;
+      padding-left: 58px;
     }
 
     [data-fs-navbar-button-menu] {
@@ -126,8 +127,13 @@
 
       [data-fs-button-signin-link] {
         display: inline-flex;
+        border-right: 1px solid #5a5a5a;
       }
     }
+    [data-fs-cart-toggle] {
+      color: #fff;
+    }
+
 
     [data-fs-search-input-wrapper] {
       display: none;

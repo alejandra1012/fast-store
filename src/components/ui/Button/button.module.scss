@@ -287,10 +287,10 @@
     white-space: nowrap;
 
     &:hover {
-      color: var(--fs-button-tertiary-text-color-hover);
-      background-color: var(--fs-button-tertiary-bkg-color-hover);
-      border-color: var(--fs-button-tertiary-border-color-hover);
-      box-shadow: var(--fs-button-tertiary-shadow-hover);
+      color: #bbb;
+      // background-color: var(--fs-button-tertiary-bkg-color-hover);
+      // border-color: var(--fs-button-tertiary-border-color-hover);
+      // box-shadow: var(--fs-button-tertiary-shadow-hover);
     }
 
     &:focus, &:focus-visible {

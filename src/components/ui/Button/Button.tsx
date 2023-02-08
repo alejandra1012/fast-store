@@ -39,6 +39,10 @@ export interface ButtonProps
    */
   'aria-label'?: AriaAttributes['aria-label']
   /**
+   * variable para el texto del carrito
+   */
+  label?: string
+  /**
    * Specifies that this button should be disabled
    */
   disabled?: boolean
@@ -52,6 +56,7 @@ function Button({
   iconPosition,
   children,
   counter = 0,
+  label,
   'aria-label': ariaLabel,
   disabled,
   ...props
@@ -76,6 +81,7 @@ function Button({
           <UIIcon component={icon} />
         </>
       )}
+      {label && <span data-fs-button-label>{label}</span>}
       {children}
       {iconPosition === 'right' && <UIIcon component={icon} />}
     </UIButton>

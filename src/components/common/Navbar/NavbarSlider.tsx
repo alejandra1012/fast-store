@@ -1,11 +1,10 @@
 import { Suspense } from 'react'
-import Button, {
-  ButtonSignIn,
-  ButtonSignInFallback,
-} from 'src/components/ui/Button'
+import Button, { ButtonSignInFallback } from 'src/components/ui/Button'
+import { ButtonOrdersMenu } from 'src/components/ui/Button/ButtonLink/ButtonSignIn'
+import ButtonSignInMenu from 'src/components/ui/Button/ButtonLink/ButtonSignIn/ButtonSigninMenu'
 import Icon from 'src/components/ui/Icon'
-import Link from 'src/components/ui/Link'
-import Logo from 'src/components/ui/Logo'
+// import Link from 'src/components/ui/Link'
+// import Logo from 'src/components/ui/Logo'
 import SlideOver from 'src/components/ui/SlideOver'
 import { mark } from 'src/sdk/tests/mark'
 import { useUI } from 'src/sdk/ui/Provider'
@@ -23,21 +22,16 @@ function NavbarSlider() {
       isOpen
       fade={fade}
       onDismiss={fadeOut}
-      size="full"
+      size="partial"
       direction="leftSide"
       className={styles.fsNavbarSlider}
       onTransitionEnd={() => fade === 'out' && closeNavbar()}
     >
       <header data-fs-navbar-slider-header>
-        <Link
-          href="/"
-          onClick={fadeOut}
-          aria-label="Go to FastStore home"
-          title="Go to FastStore home"
-          data-fs-navbar-slider-logo
-        >
-          <Logo />
-        </Link>
+        <Suspense fallback={<ButtonSignInFallback />}>
+          <ButtonSignInMenu />
+          <ButtonOrdersMenu />
+        </Suspense>
 
         <Button
           data-fs-navbar-slider-button
@@ -49,11 +43,7 @@ function NavbarSlider() {
       <div data-fs-navbar-slider-content>
         <NavLinks onClickLink={fadeOut} />
       </div>
-      <footer data-fs-navbar-slider-footer>
-        <Suspense fallback={<ButtonSignInFallback />}>
-          <ButtonSignIn />
-        </Suspense>
-      </footer>
+      <footer data-fs-navbar-slider-footer />
     </SlideOver>
   )
 }

@@ -294,8 +294,8 @@
     }
 
     &:focus, &:focus-visible {
-      color: var(--fs-button-tertiary-text-color-hover);
-      background-color: var(--fs-button-tertiary-bkg-color-hover);
+      // color: var(--fs-button-tertiary-text-color-hover);
+      // background-color: var(--fs-button-tertiary-bkg-color-hover);
     }
 
     &:active {
@@ -303,6 +303,21 @@
       background-color: var(--fs-button-tertiary-bkg-color-active);
       border-color: var(--fs-button-tertiary-border-color-active);
     }
+    &[data-fs-button-signin-menu-link] {
+      background-color: #fff;
+      color: #f50;
+      border: 1px solid;
+      white-space:break-spaces;
+      text-align: center;
+
+     }
+     &[data-fs-button-orders-link] {
+      background-color: #f50;
+      color: #fff;
+      white-space:break-spaces;
+      text-align: center;
+
+     }
 
     &[data-fs-button-inverse="true"] {
       color: var(--fs-button-tertiary-inverse-text-color);
@@ -322,9 +337,9 @@
       }
 
       &:active {
-        color: var(--fs-button-tertiary-inverse-text-color-active);
-        background-color: var(--fs-button-tertiary-inverse-bkg-color-active);
-        border-color: var(--fs-button-tertiary-inverse-border-color-active);
+        // color: var(--fs-button-tertiary-inverse-text-color-active);
+        // background-color: var(--fs-button-tertiary-inverse-bkg-color-active);
+        // border-color: var(--fs-button-tertiary-inverse-border-color-active);
       }
     }
   }

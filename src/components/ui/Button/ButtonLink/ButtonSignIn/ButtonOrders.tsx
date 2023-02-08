@@ -14,7 +14,9 @@ const ButtonOrders = () => {
       variant="tertiary"
     >
       <Icon name="Truck" width={35} height={35} />
-      <span>{person?.id ? 'My Account' : 'Mis pedidos'}</span>
+      <span data-fs-signing-label>
+        {person?.id ? 'My Account' : 'Mis pedidos'}
+      </span>
     </ButtonLink>
   )
 }

@@ -36,6 +36,7 @@
     // padding-right: 30px;
     padding-left: 30px;
     background-color: #eee;
+    border-bottom: 1px solid #ccc;
 
     [data-fs-navbar-slider-button] {
       margin-right: var(--fs-navbar-slider-header-button-margin-right);
@@ -69,6 +70,12 @@
   [data-fs-navbar-slider-content] {
 
     [data-fs-navlinks-link]{
+      color: #666;
+    }
+  }
+  [data-fs-navbar-slider--header] {
+
+    [data-fs-navbar-sub-menu-button]{
       color: #666;
     }
   }

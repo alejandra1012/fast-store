@@ -19,56 +19,41 @@ type CollectionType = {
 const collections = [
   {
     icon: 'Truck',
-    name: 'Mis pedidos',
+    name: 'Descarga la app',
     href: '/solo-Hoy',
   },
   {
     icon: 'Info',
-    name: 'CMR Puntos',
+    name: 'Descuentos Banco Falabella',
     href: '/top-ventas',
   },
   {
     icon: 'Checked',
-    name: 'Mis reseñas',
+    name: 'Retiro en Tienda',
     href: '/tiendas-oficiales',
   },
   {
     icon: 'Tag',
-    name: 'Mis cupones',
+    name: 'Productos Internacionales',
     href: '/vender-ene-linio',
   },
   {
-    icon: 'UserLinio',
-    name: 'Mis datos personales',
+    icon: 'PlusCircle',
+    name: 'Mejor Calificados',
     href: '/preguntas-frecuentes',
-  },
-  {
-    icon: 'Storefront',
-    name: 'Mis direcciones',
-    href: '/recently-viewed-products',
-  },
-  {
-    icon: 'Ruler',
-    name: 'Mis métodos de pago',
-    href: '/cm/cmr-banco-falabella',
-  },
-  {
-    icon: 'Bell',
-    name: 'Mis suscripciones',
-    href: '/https://www.falabella.com.co/falabella-co',
   },
 ]
 
-function NavLinksMenu({ onClickLink, classes = '' }: NavLinksProps) {
+function NavLinksMenu3({ onClickLink, classes = '' }: NavLinksProps) {
   return (
     <nav className={`${styles.fsNavlinks} ${classes}`}>
-      <div className="layout__content">
+      <div className="layout__content" data-fs-navbarlinks-container>
         {/* <RegionalizationButton /> */}
         <UIList data-fs-navlinks-list>
           {collections.map(({ href, name, icon }: CollectionType) => (
             <li key={name} data-fs-navlinks-list-item>
               <Link
-                data-fs-navlinks-link-menu
+                data-fs-navlinks-link-menu2
                 variant="display"
                 icon={icon && <Icon name={icon} width={17} height={17} />}
                 href={href}
@@ -84,4 +69,4 @@ function NavLinksMenu({ onClickLink, classes = '' }: NavLinksProps) {
   )
 }
 
-export default mark(NavLinksMenu)
+export default mark(NavLinksMenu3)

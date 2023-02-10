@@ -85,6 +85,22 @@
 
     // &:visited { color: var(--fs-link-display-text-color-visited); }
   }
+  &[data-fs-navlinks-link-menu]{
+    color: #666;
+    fill: #f50;
+    svg{
+      margin-right: 10px;
+    }
+
+  }
+  &[data-fs-navlinks-link-menu2]{
+    color: #666;
+    fill: #f50;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+  }
   &[data-fs-link-variant=display]:hover {
     color: #bbb;
   }

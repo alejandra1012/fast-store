@@ -12,15 +12,20 @@ import { useFadeEffect } from 'src/sdk/ui/useFadeEffect'
 
 import styles from './navbar-slider.module.scss'
 import NavbarSubMenu from './NavbarSubMenu'
+import NavbarSubMenu2 from './NavbarSubMenu2'
+import NavbarSubMenu3 from './NavbarSubMenu3'
 import NavLinks from './NavLinks'
 
 function NavbarSlider() {
-  // const { openNavbar, navbar: displayNavbar } = useUI()
   const [openSubMenu, setOpenSumenu] = useState(false)
+  const [openSubMenu2, setOpenSumenu2] = useState(false)
+  const [openSubMenu3, setOpenSumenu3] = useState(false)
   const { closeNavbar } = useUI()
   const { fade, fadeOut } = useFadeEffect()
 
   const handleClick = () => setOpenSumenu(!openSubMenu)
+  const handleClick2 = () => setOpenSumenu2(!openSubMenu2)
+  const handleClick3 = () => setOpenSumenu3(!openSubMenu3)
 
   return (
     <>
@@ -61,7 +66,7 @@ function NavbarSlider() {
             aria-label="Open SubMenu1"
             icon={<Icon name="Grid" width={17} height={17} />}
             label="Categorias"
-            onClick={handleClick}
+            onClick={handleClick2}
           />
         </>
         <>
@@ -70,12 +75,14 @@ function NavbarSlider() {
             aria-label="Open SubMenu2"
             icon={<Icon name="" width={17} height={17} />}
             label="Beneficios Linio"
-            onClick={handleClick}
+            onClick={handleClick3}
           />
         </>
         <div data-fs-navbar-slider-content>
           <NavLinks onClickLink={fadeOut} />
           {openSubMenu && <NavbarSubMenu />}
+          {openSubMenu2 && <NavbarSubMenu2 />}
+          {openSubMenu3 && <NavbarSubMenu3 />}
         </div>
         <footer data-fs-navbar-slider-footer />
       </SlideOver>

@@ -19,56 +19,56 @@ type CollectionType = {
 const collections = [
   {
     icon: 'Truck',
-    name: 'Mis pedidos',
+    name: 'Solo Hoy',
     href: '/solo-Hoy',
   },
   {
     icon: 'Info',
-    name: 'CMR Puntos',
+    name: 'Tiendas oficiales',
     href: '/top-ventas',
   },
   {
     icon: 'Checked',
-    name: 'Mis reseñas',
+    name: 'Celulares y \n Accesorios',
     href: '/tiendas-oficiales',
   },
   {
     icon: 'Tag',
-    name: 'Mis cupones',
+    name: 'Tv, Audio y Video',
     href: '/vender-ene-linio',
   },
   {
-    icon: 'UserLinio',
-    name: 'Mis datos personales',
+    icon: 'MapPin',
+    name: 'Computación',
     href: '/preguntas-frecuentes',
   },
   {
     icon: 'Storefront',
-    name: 'Mis direcciones',
+    name: 'Consola y Videojuegos',
     href: '/recently-viewed-products',
   },
   {
-    icon: 'Ruler',
-    name: 'Mis métodos de pago',
+    icon: 'Envelop',
+    name: 'Electrodomésticos',
     href: '/cm/cmr-banco-falabella',
   },
   {
     icon: 'Bell',
-    name: 'Mis suscripciones',
+    name: 'Hogar',
     href: '/https://www.falabella.com.co/falabella-co',
   },
 ]
 
-function NavLinksMenu({ onClickLink, classes = '' }: NavLinksProps) {
+function NavLinksMenu2({ onClickLink, classes = '' }: NavLinksProps) {
   return (
     <nav className={`${styles.fsNavlinks} ${classes}`}>
-      <div className="layout__content">
+      <div className="layout__content" data-fs-navbarlinks-container>
         {/* <RegionalizationButton /> */}
         <UIList data-fs-navlinks-list>
           {collections.map(({ href, name, icon }: CollectionType) => (
             <li key={name} data-fs-navlinks-list-item>
               <Link
-                data-fs-navlinks-link-menu
+                data-fs-navlinks-link-menu2
                 variant="display"
                 icon={icon && <Icon name={icon} width={17} height={17} />}
                 href={href}
@@ -84,4 +84,4 @@ function NavLinksMenu({ onClickLink, classes = '' }: NavLinksProps) {
   )
 }
 
-export default mark(NavLinksMenu)
+export default mark(NavLinksMenu2)

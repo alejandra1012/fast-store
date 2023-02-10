@@ -411,8 +411,11 @@
     }
     &[data-fs-navbar-open-sub-menu-button]{
       width: 100%;
-      color: #f50;
       justify-content: flex-start;
+      span {
+        color: #666;
+        fill: #f50;
+      }
     }
   }
 

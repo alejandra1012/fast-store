@@ -23,16 +23,16 @@ function NavbarSubMenu() {
         isOpen
         fade={fade}
         onDismiss={fadeOut}
-        size="partial"
+        size="full"
         direction="leftSide"
         className={styles.fsNavbarSlider}
         onTransitionEnd={() => fade === 'out' && closeNavbar()}
       >
-        <header data-fs-navbar-slider-header>
+        <header data-fs-navbar-slider-header-submenu3>
           <Button
-            data-fs-navbar-sub-menu-button
+            data-fs-navbar-sub-menu3-button
             aria-label="back"
-            icon={<Icon name="ArrowLeft" width={32} height={32} />}
+            icon={<Icon name="ArrowLeft" width={17} height={17} />}
             label="Mi Cuenta"
             onClick={fadeOut}
           />

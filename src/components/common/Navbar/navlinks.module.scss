@@ -52,6 +52,17 @@
     display: flex;
     align-items: center;
   }
+  [data-fs-navbarlinks-container]{
+    [data-fs-navlinks-list]{
+      display: grid;
+      grid-template-columns: 50% 50%;
+
+    }
+    [data-fs-navlinks-list-item]{
+      justify-content: center;
+    }
+
+  }
 
   [data-fs-regionalization-button] {
     margin-left: calc(-1 * var(--fs-spacing-1));

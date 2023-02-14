@@ -28,12 +28,12 @@ function NavbarSubMenu3() {
         className={styles.fsNavbarSlider}
         onTransitionEnd={() => fade === 'out' && closeNavbar()}
       >
-        <header data-fs-navbar-slider-header>
+        <header data-fs-navbar-slider-header-submenu3>
           <Button
-            data-fs-navbar-sub-menu-button
+            data-fs-navbar-sub-menu3-button
             aria-label="back"
-            icon={<Icon name="ArrowLeft" width={32} height={32} />}
-            label="Mis Beneficios Linio"
+            icon={<Icon name="ArrowLeft" width={17} height={17} />}
+            label="Beneficios Linio"
             onClick={fadeOut}
           />
         </header>

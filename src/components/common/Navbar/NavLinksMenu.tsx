@@ -18,17 +18,17 @@ type CollectionType = {
 }
 const collections = [
   {
-    icon: 'Truck',
+    icon: 'Truck2',
     name: 'Mis pedidos',
     href: '/solo-Hoy',
   },
   {
-    icon: 'Info',
+    icon: 'Cmr-puntos',
     name: 'CMR Puntos',
     href: '/top-ventas',
   },
   {
-    icon: 'Checked',
+    icon: 'Pen',
     name: 'Mis reseñas',
     href: '/tiendas-oficiales',
   },
@@ -48,12 +48,12 @@ const collections = [
     href: '/recently-viewed-products',
   },
   {
-    icon: 'Ruler',
+    icon: 'Cash',
     name: 'Mis métodos de pago',
     href: '/cm/cmr-banco-falabella',
   },
   {
-    icon: 'Bell',
+    icon: 'Alert',
     name: 'Mis suscripciones',
     href: '/https://www.falabella.com.co/falabella-co',
   },
@@ -70,7 +70,7 @@ function NavLinksMenu({ onClickLink, classes = '' }: NavLinksProps) {
               <Link
                 data-fs-navlinks-link-menu
                 variant="display"
-                icon={icon && <Icon name={icon} width={17} height={17} />}
+                icon={icon && <Icon name={icon} width={20} height={20} />}
                 href={href}
                 onClick={onClickLink}
               >

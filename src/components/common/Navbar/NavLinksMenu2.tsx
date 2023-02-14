@@ -18,42 +18,42 @@ type CollectionType = {
 }
 const collections = [
   {
-    icon: 'Truck',
+    icon: 'Tag',
     name: 'Solo Hoy',
     href: '/solo-Hoy',
   },
   {
-    icon: 'Info',
+    icon: 'Storefront',
     name: 'Tiendas oficiales',
     href: '/top-ventas',
   },
   {
-    icon: 'Checked',
+    icon: 'Phone',
     name: 'Celulares y \n Accesorios',
     href: '/tiendas-oficiales',
   },
   {
-    icon: 'Tag',
+    icon: 'Tv',
     name: 'Tv, Audio y Video',
     href: '/vender-ene-linio',
   },
   {
-    icon: 'MapPin',
+    icon: 'Desktop',
     name: 'Computación',
     href: '/preguntas-frecuentes',
   },
   {
-    icon: 'Storefront',
+    icon: 'Games',
     name: 'Consola y Videojuegos',
     href: '/recently-viewed-products',
   },
   {
-    icon: 'Envelop',
+    icon: 'Electrodomesticos',
     name: 'Electrodomésticos',
     href: '/cm/cmr-banco-falabella',
   },
   {
-    icon: 'Bell',
+    icon: 'Alert',
     name: 'Hogar',
     href: '/https://www.falabella.com.co/falabella-co',
   },
@@ -61,7 +61,7 @@ const collections = [
 
 function NavLinksMenu2({ onClickLink, classes = '' }: NavLinksProps) {
   return (
-    <nav className={`${styles.fsNavlinks} ${classes}`}>
+    <nav className={`${styles.fsNavlinks} ${classes}`} data-fs-navbarlinks-cont>
       <div className="layout__content" data-fs-navbarlinks-container>
         {/* <RegionalizationButton /> */}
         <UIList data-fs-navlinks-list>
@@ -70,7 +70,7 @@ function NavLinksMenu2({ onClickLink, classes = '' }: NavLinksProps) {
               <Link
                 data-fs-navlinks-link-menu2
                 variant="display"
-                icon={icon && <Icon name={icon} width={17} height={17} />}
+                icon={icon && <Icon name={icon} width={48} height={48} />}
                 href={href}
                 onClick={onClickLink}
               >

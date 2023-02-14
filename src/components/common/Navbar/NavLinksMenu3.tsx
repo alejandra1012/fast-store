@@ -18,27 +18,27 @@ type CollectionType = {
 }
 const collections = [
   {
-    icon: 'Truck',
+    icon: 'Phone',
     name: 'Descarga la app',
     href: '/solo-Hoy',
   },
   {
-    icon: 'Info',
+    icon: 'Cmr-puntos',
     name: 'Descuentos Banco Falabella',
     href: '/top-ventas',
   },
   {
-    icon: 'Checked',
+    icon: 'Storefront',
     name: 'Retiro en Tienda',
     href: '/tiendas-oficiales',
   },
   {
-    icon: 'Tag',
+    icon: 'Plane',
     name: 'Productos Internacionales',
     href: '/vender-ene-linio',
   },
   {
-    icon: 'PlusCircle',
+    icon: 'Star',
     name: 'Mejor Calificados',
     href: '/preguntas-frecuentes',
   },
@@ -55,7 +55,7 @@ function NavLinksMenu3({ onClickLink, classes = '' }: NavLinksProps) {
               <Link
                 data-fs-navlinks-link-menu2
                 variant="display"
-                icon={icon && <Icon name={icon} width={17} height={17} />}
+                icon={icon && <Icon name={icon} width={48} height={48} />}
                 href={href}
                 onClick={onClickLink}
               >

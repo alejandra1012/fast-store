@@ -28,16 +28,16 @@ function NavbarSubMenu2() {
         className={styles.fsNavbarSlider}
         onTransitionEnd={() => fade === 'out' && closeNavbar()}
       >
-        <header data-fs-navbar-slider-header>
+        <header data-fs-navbar-slider-header-submenu3>
           <Button
-            data-fs-navbar-sub-menu-button
+            data-fs-navbar-sub-menu3-button
             aria-label="back"
-            icon={<Icon name="ArrowLeft" width={32} height={32} />}
+            icon={<Icon name="ArrowLeft" width={17} height={17} />}
             label="Categorias"
             onClick={fadeOut}
           />
         </header>
-        <div data-fs-navbar-slider-content>
+        <div data-fs-navbar-slider-content-submenu2>
           <NavLinksMenu2 onClickLink={fadeOut} />
         </div>
         <footer data-fs-navbar-slider-footer />

@@ -60,5 +60,10 @@
       transform: translateX(100%);
     }
   }
+  [data-fs-slide-over-size="full"]{
+    @include media(">=notebook"){
+      size: 'full';
+    }
+  }
 
 }

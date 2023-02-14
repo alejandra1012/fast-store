@@ -1,4 +1,5 @@
 import { List as UIList } from '@faststore/ui'
+import Icon from 'src/components/ui/Icon'
 import type { AnchorHTMLAttributes } from 'react'
 // import RegionalizationButton from 'src/components/regionalization/RegionalizationButton'
 import Link from 'src/components/ui/Link'
@@ -10,57 +11,66 @@ interface NavLinksProps {
   onClickLink?: AnchorHTMLAttributes<HTMLAnchorElement>['onClick']
   classes?: string
 }
-
+type CollectionType = {
+  icon?: string
+  name: string
+  href: string
+}
 const collections = [
   {
-    name: 'Solo Hoy',
+    icon: 'Truck2',
+    name: 'Mis pedidos',
     href: '/solo-Hoy',
   },
   {
-    name: 'Solo para Ti',
+    icon: 'Cmr-puntos',
+    name: 'CMR Puntos',
     href: '/top-ventas',
   },
   {
-    name: 'Tiendas Oficiales',
+    icon: 'Pen',
+    name: 'Mis reseñas',
     href: '/tiendas-oficiales',
   },
   {
-    name: 'Vende en Linio',
+    icon: 'Tag',
+    name: 'Mis cupones',
     href: '/vender-ene-linio',
   },
   {
-    name: 'Ayuda',
+    icon: 'UserLinio',
+    name: 'Mis datos personales',
     href: '/preguntas-frecuentes',
   },
   {
-    name: 'Historial',
+    icon: 'Storefront',
+    name: 'Mis direcciones',
     href: '/recently-viewed-products',
   },
   {
-    name: 'Banco Falabella',
+    icon: 'Cash',
+    name: 'Mis métodos de pago',
     href: '/cm/cmr-banco-falabella',
   },
   {
-    name: 'Falabella',
+    icon: 'Alert',
+    name: 'Mis suscripciones',
     href: '/https://www.falabella.com.co/falabella-co',
-  },
-  {
-    name: 'Ventas Telefónicas',
-    href: '/ventass-telefonicas',
   },
 ]
 
-function NavLinks({ onClickLink, classes = '' }: NavLinksProps) {
+function NavLinksMenu({ onClickLink, classes = '' }: NavLinksProps) {
   return (
     <nav className={`${styles.fsNavlinks} ${classes}`}>
       <div className="layout__content">
         {/* <RegionalizationButton /> */}
         <UIList data-fs-navlinks-list>
-          {collections.map(({ href, name }) => (
+          {collections.map(({ href, name, icon }: CollectionType) => (
             <li key={name} data-fs-navlinks-list-item>
               <Link
-                data-fs-navlinks-link
+                data-fs-navlinks-link-menu
                 variant="display"
+                icon={icon && <Icon name={icon} width={20} height={20} />}
                 href={href}
                 onClick={onClickLink}
               >
@@ -74,4 +84,4 @@ function NavLinks({ onClickLink, classes = '' }: NavLinksProps) {
   )
 }
 
-export default mark(NavLinks)
+export default mark(NavLinksMenu)

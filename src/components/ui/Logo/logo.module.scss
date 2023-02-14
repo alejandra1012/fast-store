@@ -1,6 +1,11 @@
+@import "src/styles/scaffold";
+
 .fs-logo {
-  --fs-logo-width      : 7rem;
-  --fs-logo-img        : url("~/static/brandless-neutral.png");
+  --fs-logo-width      : 5.688rem;
+  --fs-logo-img        : url("~/static/linio-desktop__logo.svg");
+  --fs-logo-width-phone: 2.5rem;
+  --fs-logo-img-phone  : url("~/static/linio-mobile__logo.svg");
+
 
   display: block;
   width: var(--fs-logo-width);
@@ -9,4 +14,9 @@
   background: var(--fs-logo-img) no-repeat;
   background-position: center;
   background-size: 100% auto;
+
+  @include media ("<tablet"){
+    background: var(--fs-logo-img-phone) no-repeat;
+    width: var( --fs-logo-width-phone);
+  }
 }

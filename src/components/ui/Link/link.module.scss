@@ -9,6 +9,7 @@
   --fs-link-min-width                  : auto;
   --fs-link-min-height                 : var(--fs-link-min-width);
   --fs-link-padding                    : var(--fs-spacing-2) var(--fs-spacing-0);
+  --fs-link-padding-desktop            : var(--fs-spacing-2) var(--fs-spacing-2);
   --fs-link-border-radius              : var(--fs-border-radius);
 
   --fs-link-text-line-height           : 1.5;
@@ -27,7 +28,7 @@
 
   // Display
   --fs-link-display-text-line-height   : var(--fs-link-text-line-height);
-  --fs-link-display-text-color         : var(--fs-color-text-display);
+  --fs-link-display-text-color         : var(--fs-color-text-links-linio);
   --fs-link-display-text-color-visited : var(--fs-link-display-text-color);
 
   // Inline
@@ -43,6 +44,11 @@
   // --------------------------------------------------------
   // Structural Styles
   // --------------------------------------------------------
+
+  @include media(">=notebook"){
+  padding: var(--fs-link-padding-desktop);
+
+  }
 
   min-width: var(--fs-link-min-width);
   min-height: var(--fs-link-min-height);
@@ -72,9 +78,35 @@
   &[data-fs-link-variant="display"] {
     line-height: var(--fs-link-display-text-line-height);
     color: var(--fs-link-display-text-color);
+    font-size: .8rem;
+    font-weight: 400;
+    text-decoration: none;
+    font-family: arial;
 
-    &:visited { color: var(--fs-link-display-text-color-visited); }
+    // &:visited { color: var(--fs-link-display-text-color-visited); }
   }
+  &[data-fs-navlinks-link-menu]{
+    color: #666;
+    fill: #f50;
+    svg{
+      margin-right: 10px;
+    }
+
+  }
+  &[data-fs-navlinks-link-menu2]{
+    color: #666;
+    fill: #f50;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 17px;
+    overflow: hidden;
+
+  }
+  &[data-fs-link-variant=display]:hover {
+    color: #bbb;
+  }
+
 
   &[data-fs-link-variant="inline"] {
     display: inline-block;

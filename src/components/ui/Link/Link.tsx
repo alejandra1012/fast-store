@@ -1,8 +1,8 @@
 import { forwardRef, useMemo } from 'react'
-import type { Ref, ElementType, AnchorHTMLAttributes } from 'react'
+import type { Ref, ElementType, AnchorHTMLAttributes, ReactNode } from 'react'
 import { Link as GatsbyLink } from 'gatsby'
 import type { GatsbyLinkProps } from 'gatsby'
-import { Link as UILink } from '@faststore/ui'
+import { Link as UILink, Icon as UIIcon } from '@faststore/ui'
 import type { LinkProps as UILinkProps } from '@faststore/ui'
 
 import styles from './link.module.scss'
@@ -22,12 +22,20 @@ export type LinkProps<T extends ElementType = 'a'> = UILinkProps<T> &
      * Defines use of inverted color.
      */
     inverse?: boolean
+    icon?: ReactNode
   }
 
 const Link = forwardRef<HTMLAnchorElement, LinkProps>(function Link<
   T extends ElementType = 'a'
 >(
-  { href, inverse, children, variant = 'default', ...otherProps }: LinkProps<T>,
+  {
+    href,
+    inverse,
+    icon,
+    children,
+    variant = 'default',
+    ...otherProps
+  }: LinkProps<T>,
   ref: Ref<HTMLAnchorElement> | undefined
 ) {
   const isInternalLink = useMemo(
@@ -46,6 +54,11 @@ const Link = forwardRef<HTMLAnchorElement, LinkProps>(function Link<
         className={styles.fsLink}
         {...otherProps}
       >
+        {icon !== undefined && (
+          <>
+            <UIIcon component={icon} />
+          </>
+        )}
         {children}
       </UILink>
     )
@@ -61,6 +74,11 @@ const Link = forwardRef<HTMLAnchorElement, LinkProps>(function Link<
       className={styles.fsLink}
       {...otherProps}
     >
+      {icon !== undefined && (
+        <>
+          <UIIcon component={icon} />
+        </>
+      )}
       {children}
     </UILink>
   )

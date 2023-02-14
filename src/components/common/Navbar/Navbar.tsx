@@ -1,11 +1,12 @@
-import { Suspense, useRef, useState } from 'react'
+import { Suspense, useState } from 'react'
 import CartToggle from 'src/components/cart/CartToggle'
 import SearchInput from 'src/components/search/SearchInput'
-import type { SearchInputRef } from 'src/components/search/SearchInput'
+// import type { SearchInputRef } from 'src/components/search/SearchInput'
 import Button, {
   ButtonSignIn,
   ButtonSignInFallback,
 } from 'src/components/ui/Button'
+import ButtonOrders from 'src/components/ui/Button/ButtonLink/ButtonSignIn/ButtonOrders'
 import Icon from 'src/components/ui/Icon'
 import Link from 'src/components/ui/Link'
 import Logo from 'src/components/ui/Logo'
@@ -20,14 +21,14 @@ import NavLinks from './NavLinks'
 function Navbar() {
   const scrollDirection = useScrollDirection()
   const { openNavbar, navbar: displayNavbar } = useUI()
-  const searchMobileRef = useRef<SearchInputRef>(null)
+  // const searchMobileRef = useRef<SearchInputRef>(null)
 
   const [searchExpanded, setSearchExpanded] = useState(false)
 
-  const handlerExpandSearch = () => {
-    setSearchExpanded(true)
-    searchMobileRef.current?.inputRef?.focus()
-  }
+  // const handlerExpandSearch = () => {
+  //   setSearchExpanded(true)
+  //   searchMobileRef.current?.inputRef?.focus()
+  // }
 
   return (
     <header
@@ -67,19 +68,20 @@ function Navbar() {
                 icon={<Icon name="CaretLeft" width={32} height={32} />}
                 onClick={() => {
                   setSearchExpanded(false)
-                  searchMobileRef.current?.resetSearchInput()
+                  // searchMobileRef.current?.resetSearchInput()
                 }}
               />
             )}
-            <SearchInput
+            {/* <SearchInput
               placeholder=""
               ref={searchMobileRef}
               testId="store-input-mobile"
               buttonTestId="store-input-mobile-button"
               onSearchClick={handlerExpandSearch}
-            />
+            /> */}
             <Suspense fallback={<ButtonSignInFallback />}>
               <ButtonSignIn />
+              <ButtonOrders />
             </Suspense>
             <CartToggle />
           </div>

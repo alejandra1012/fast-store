@@ -1,3 +1,5 @@
 export { default } from './Navbar'
 export { default as NavbarSlider } from './NavbarSlider'
 export { default as NavLinks } from './NavLinks'
+export { default as NavbarSubMenu } from './NavbarSubMenu'
+export { default as NavlinksMenu } from './NavLinksMenu'

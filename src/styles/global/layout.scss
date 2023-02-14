@@ -50,6 +50,9 @@ main,
   margin-right: auto;
   margin-left: auto;
 }
+.layout__content :global(.label__cart){
+color: #fff;
+}
 
 .no-scroll {
   overflow: hidden;

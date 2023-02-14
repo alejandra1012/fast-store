@@ -9,7 +9,7 @@
 
   --fs-navbar-height-mobile                              : 3.5rem;
 
-  --fs-navbar-bkg-color                                  : rgb(255 255 255 / 90%);
+  --fs-navbar-bkg-color                                  : #3d3d3d;
 
   --fs-navbar-transition-timing                          : var(--fs-transition-timing);
   --fs-navbar-transition-function                        : var(--fs-transition-function);
@@ -77,8 +77,11 @@
     order: 2;
 
     @include media("<notebook") {
-      display: none;
+      max-width: 50%;
+      order: unset;
+
     }
+
   }
 
   [data-fs-navbar-row] {
@@ -94,11 +97,15 @@
 
     @include media(">=notebook") {
       display: grid;
-      grid-template-columns: 1fr minmax(auto, 37.5rem) 1fr;
+      // grid-template-columns: 1fr minmax(auto, 37.5rem) 1fr 1fr;
+      grid-template-columns: minmax(auto, 0rem) 1fr minmax(auto, 34.5rem) 1fr minmax(auto, 3rem) 1fr 1fr;
+      padding-left: 58px;
     }
 
-    [data-fs-navbar-button-menu] {
-      @include media(">=notebook") { display: none; }
+    [data-fs-navbar-buttons] {
+      @include media(">=tablet") {
+        padding-right: 20px;
+      }
     }
   }
 
@@ -110,6 +117,12 @@
     [data-fs-button-signin-link] + [data-fs-cart-toggle] {
       @include media(">=notebook") {
         margin-left: var(--fs-spacing-3);
+        padding-left: 45px;
+      }
+    }
+    [data-fs-cart-toggle] [data-fs-button-label] {
+      @include media("<notebook"){
+        display:none
       }
     }
 
@@ -117,11 +130,30 @@
       display: none;
     }
 
+    @include media(">=tablet"){
+
+    [data-fs-button-signin-link] {
+        display: block;
+        border-right: 1px solid #5a5a5a;
+        padding: 8px 12px;
+        fill: #fff;
+    }
+
+    [data-fs-signing-label] {
+      display: none;
+    }
+  }
+
     @include media(">=notebook") {
       order: 2;
 
-      [data-fs-button-signin-link] {
+      [data-fs-button-signin-link]  {
         display: inline-flex;
+        border-right: 1px solid #5a5a5a;
+
+      }
+      [data-fs-signing-label]{
+        display: block;
       }
     }
 
@@ -193,12 +225,13 @@
 
   [data-fs-navbar-logo] {
     align-self: stretch;
+    padding-right: 12px;
 
     @include media("<notebook") {
-      padding: var(--fs-spacing-1) 0 var(--fs-spacing-1) var(--fs-spacing-3);
-      margin-right: auto;
-      margin-left: var(--fs-spacing-0);
-      border-left: var(--fs-navbar-logo-border-left-width) solid var(--fs-navbar-logo-border-left-color);
+      // padding: var(--fs-spacing-1) 0 var(--fs-spacing-1) var(--fs-spacing-3);
+      // margin-right: auto;
+      // margin-left: var(--fs-spacing-0);
+      // border-left: var(--fs-navbar-logo-border-left-width) solid var(--fs-navbar-logo-border-left-color);
     }
   }
 }

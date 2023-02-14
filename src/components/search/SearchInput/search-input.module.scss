@@ -6,7 +6,7 @@
   // --------------------------------------------------------
 
   // Default properties
-  --fs-search-input-padding                       : var(--fs-spacing-1) var(--fs-spacing-7) var(--fs-spacing-1) var(--fs-spacing-2);
+  --fs-search-input-padding                       : var(--fs-spacing-1) var(--fs-spacing-2) var(--fs-spacing-1) var(--fs-spacing-1);
   --fs-search-input-bkg-color                     : var(--fs-color-body-bkg);
   --fs-search-input-box-shadow                    : 0 0 0 var(--fs-border-width) var(--fs-border-color-active);
 
@@ -14,7 +14,7 @@
   --fs-search-input-height-desktop                : var(--fs-spacing-6);
 
   --fs-search-input-border-width                  : var(--fs-border-width);
-  --fs-search-input-border-radius                 : var(--fs-border-radius);
+  --fs-search-input-border-radius                 : var(--fs-border-radius-medium);
   --fs-search-input-border-color                  : var(--fs-border-color);
   --fs-search-input-border-color-hover            : var(--fs-border-color-active);
 
@@ -32,7 +32,7 @@
   // Icon
   --fs-search-input-icon-width                    : var(--fs-spacing-4);
   --fs-search-input-icon-height                   : var(--fs-search-input-icon-width);
-  --fs-search-input-icon-color                    : var(--fs-color-neutral-7);
+  --fs-search-input-icon-color                    : var(--fs-color-linio-1);
 
   // Dropdown
   --fs-search-input-dropdown-padding              : var(--fs-spacing-3);
@@ -62,9 +62,13 @@
     position: relative;
     display: inline-flex;
     width: 100%;
-    height: var(--fs-search-input-height-mobile);
+    height: var(--fs-search-input-height-desktop);
+    // height: var(--fs-search-input-height-mobile);
 
-    @include media(">=notebook") { height: var(--fs-search-input-height-desktop); }
+    @include media(">=notebook") {
+      height: var(--fs-search-input-height-desktop);
+
+    }
 
     [data-fs-search-input] {
       width: 100%;
@@ -92,7 +96,7 @@
     [data-fs-button] {
       position: absolute;
       right: var(--fs-spacing-0);
-      width: var(--fs-search-input-button-width);
+
       height: var(--fs-search-input-button-height-mobile);
       padding: 0;
       background-color: var(--fs-search-input-button-bkg-color);
@@ -101,6 +105,7 @@
       @include media(">=notebook") {
         height: var(--fs-search-input-button-height-desktop);
         min-height: var(--fs-search-input-button-min-height);
+        width: var(--fs-search-input-button-width);
       }
     }
 

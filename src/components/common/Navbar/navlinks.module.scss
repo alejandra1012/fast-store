@@ -5,10 +5,10 @@
   // Design Tokens for Navlinks
   // --------------------------------------------------------
 
-  --fs-navlinks-padding-top-notebook             : var(--fs-spacing-1);
+  --fs-navlinks-padding-top-notebook             : var(--fs-spacing-0);
   --fs-navlinks-padding-bottom-notebook          : var(--fs-navlinks-padding-top-notebook);
 
-  --fs-navlinks-bkg-color                        : var(--fs-color-body-bkg);
+  --fs-navlinks-bkg-color                        : var(--fs-navbar-bkg-color);
 
   --fs-navlinks-transition-property              : var(--fs-transition-property);
   --fs-navlinks-transition-timing                : var(--fs-transition-timing);
@@ -24,7 +24,7 @@
   --fs-navlinks-link-padding-notebook            : 0 var(--fs-spacing-0);
 
   // List
-  --fs-navlinks-list-padding-left-notebook       : var(--fs-spacing-3);
+  --fs-navlinks-list-padding-left-notebook       : var(--fs-spacing-12);
   --fs-navlinks-list-margin-left-notebook        : var(--fs-spacing-2);
   --fs-navlinks-list-border-left-width-notebook  : var(--fs-border-width);
   --fs-navlinks-list-border-left-color-notebook  : var(--fs-border-color-light);
@@ -52,6 +52,17 @@
     display: flex;
     align-items: center;
   }
+  [data-fs-navbarlinks-container]{
+    [data-fs-navlinks-list]{
+      display: grid;
+      grid-template-columns: 50% 50%;
+
+    }
+    [data-fs-navlinks-list-item]{
+      justify-content: center;
+    }
+
+  }
 
   [data-fs-regionalization-button] {
     margin-left: calc(-1 * var(--fs-spacing-1));
@@ -74,13 +85,14 @@
   @include media(">=notebook") {
     padding-top: var(--fs-navlinks-padding-top-notebook);
     padding-bottom: var(--fs-navlinks-padding-bottom-notebook);
+    border-top: 1px solid #5a5a5a;
 
     [data-fs-navlinks-list] {
       display: flex;
       column-gap: var(--fs-spacing-3);
       padding-left: var(--fs-navlinks-list-padding-left-notebook);
       margin-left: var(--fs-navlinks-list-margin-left-notebook);
-      border-left: var(--fs-navlinks-list-border-left-width-notebook) solid var(--fs-navlinks-list-border-left-color-notebook);
+      // border-left: var(--fs-navlinks-list-border-left-width-notebook) solid var(--fs-navlinks-list-border-left-color-notebook);
     }
 
     [data-fs-navlinks-link] {

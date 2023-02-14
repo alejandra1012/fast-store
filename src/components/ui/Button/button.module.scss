@@ -71,7 +71,7 @@
   --fs-button-secondary-inverse-shadow-hover        : var(--fs-button-shadow-hover);
 
   // Tertiary
-  --fs-button-tertiary-text-color                   : var(--fs-color-tertiary-text);
+  --fs-button-tertiary-text-color                   : var(--fs-color-tertiary-text-linio );
   --fs-button-tertiary-text-color-hover             : var(--fs-button-tertiary-text-color);
   --fs-button-tertiary-text-color-active            : var(--fs-button-primary-bkg-color);
   --fs-button-tertiary-bkg-color                    : var(--fs-color-tertiary-bkg);
@@ -145,6 +145,10 @@
   outline: none;
   box-shadow: var(--fs-button-shadow);
   transition: var(--fs-button-transition-property) var(--fs-button-transition-timing) var(--fs-button-transition-function);
+
+  [data-fs-navbar-open-sub-menu2-button]{
+    background-color: #fff;
+  }
 
   [data-fs-icon] {
     display: flex;
@@ -281,17 +285,21 @@
     color: var(--fs-button-tertiary-text-color);
     background-color: var(--fs-button-tertiary-bkg-color);
     border: var(--fs-button-border-width) solid var(--fs-button-tertiary-border-color);
+    font-family: arial;
+    font-size: var( --fs-text-size-base );
+    font-weight: 100;
+    white-space: nowrap;
 
     &:hover {
-      color: var(--fs-button-tertiary-text-color-hover);
-      background-color: var(--fs-button-tertiary-bkg-color-hover);
-      border-color: var(--fs-button-tertiary-border-color-hover);
-      box-shadow: var(--fs-button-tertiary-shadow-hover);
+      color: #bbb;
+      // background-color: var(--fs-button-tertiary-bkg-color-hover);
+      // border-color: var(--fs-button-tertiary-border-color-hover);
+      // box-shadow: var(--fs-button-tertiary-shadow-hover);
     }
 
     &:focus, &:focus-visible {
-      color: var(--fs-button-tertiary-text-color-hover);
-      background-color: var(--fs-button-tertiary-bkg-color-hover);
+      // color: var(--fs-button-tertiary-text-color-hover);
+      // background-color: var(--fs-button-tertiary-bkg-color-hover);
     }
 
     &:active {
@@ -299,6 +307,19 @@
       background-color: var(--fs-button-tertiary-bkg-color-active);
       border-color: var(--fs-button-tertiary-border-color-active);
     }
+    &[data-fs-button-signin-menu-link] {
+      background-color: #fff;
+      color: #f50;
+      border: 1px solid;
+      white-space:break-spaces;
+      text-align: center;
+     }
+     &[data-fs-button-orders-link] {
+      background-color: #f50;
+      color: #fff;
+      white-space:break-spaces;
+      text-align: center;
+     }
 
     &[data-fs-button-inverse="true"] {
       color: var(--fs-button-tertiary-inverse-text-color);
@@ -318,9 +339,9 @@
       }
 
       &:active {
-        color: var(--fs-button-tertiary-inverse-text-color-active);
-        background-color: var(--fs-button-tertiary-inverse-bkg-color-active);
-        border-color: var(--fs-button-tertiary-inverse-border-color-active);
+        // color: var(--fs-button-tertiary-inverse-text-color-active);
+        // background-color: var(--fs-button-tertiary-inverse-bkg-color-active);
+        // border-color: var(--fs-button-tertiary-inverse-border-color-active);
       }
     }
   }
@@ -382,11 +403,29 @@
       padding: var(--fs-button-icon-padding);
       border-width: 0;
     }
+    &[data-fs-navbar-sub-menu-button]{
+      color: #666;
+      font-weight: bold;
+      font-size: 1rem;
+      padding-left: 20px;
+    }
+    &[data-fs-navbar-open-sub-menu-button]{
+      width: 100%;
+      justify-content: flex-start;
+      span {
+        color: #666;
+        fill: #f50;
+      }
+    }
   }
 
   &[data-fs-button-link] {
     &:hover { text-decoration: none; }
 
     &[data-button-disabled="true"] { pointer-events: none; }
+  }
+
+  [data-fs-navbar-open-sub-menu-button] [data-fs-button-label]{
+    color: #666;
   }
 }

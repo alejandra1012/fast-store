@@ -416,6 +416,9 @@
         color: #666;
         fill: #f50;
       }
+      @include media(">=notebook") {
+
+      }
     }
   }
 

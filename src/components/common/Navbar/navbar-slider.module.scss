@@ -1,3 +1,5 @@
+@import "src/styles/scaffold";
+
 .fs-navbar-slider {
   // --------------------------------------------------------
   // Design Tokens for Navbar Slider
@@ -25,8 +27,8 @@
 
 
   // padding: var(--fs-navbar-slider-padding);
-
-  [data-fs-navbar-slider-header] {
+[data-fs-navbar-slider-header]
+   {
     position: relative;
     display: flex;
     align-items: center;
@@ -37,6 +39,9 @@
     padding-left: 30px;
     background-color: #eee;
     border-bottom: 1px solid #ccc;
+  @include media(">=notebook"){
+    display: none;
+  }
 
     [data-fs-navbar-slider-button] {
       margin-right: var(--fs-navbar-slider-header-button-margin-right);

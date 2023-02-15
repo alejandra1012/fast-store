@@ -31,8 +31,8 @@
     width: var(--fs-slide-over-partial-width-mobile);
 
     @include media(">=notebook") {
-      width: var(--fs-slide-over-partial-width-notebook);
-      max-width: var(--fs-slide-over-partial-max-width-notebook);
+      width: 100%;
+      max-width: 100%;
     }
   }
 

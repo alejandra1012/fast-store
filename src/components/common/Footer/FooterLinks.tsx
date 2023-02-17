@@ -7,78 +7,158 @@ import styles from './footer.module.scss'
 
 const links = [
   {
-    title: 'Our company',
+    title: 'ACERCA DE LINIO',
     items: [
       {
         href: '/',
-        name: 'About Us',
+        name: '¿Quienes Somos?',
       },
       {
         href: '/',
-        name: 'Our Blog',
+        name: 'Responsabilidad Social',
       },
       {
         href: '/',
-        name: 'Stores',
+        name: 'Términos de Uso',
       },
       {
         href: '/',
-        name: 'Work With Us',
+        name: 'Protección de Propiedad Intelectual',
+      },
+      {
+        href: '/',
+        name: 'Ventas Corporativas',
+      },
+      {
+        href: '/',
+        name: 'Programas de Lealtad',
+      },
+      {
+        href: '/',
+        name: 'Vuélvete un Afiliado',
+      },
+      {
+        href: '/',
+        name: 'Directorio',
+      },
+      {
+        href: '/',
+        name: 'Login',
+      },
+      {
+        href: '/',
+        name: 'Beneficios',
+      },
+      {
+        href: '/',
+        name: 'Trabaje con nosotros',
+      },
+      {
+        href: '/',
+        name: 'Canal de integridad',
+      },
+      {
+        href: '/',
+        name: 'Grupo Falabella',
+      },
+      {
+        href: '/',
+        name: 'Developers',
+      },
+      {
+        href: '/',
+        name: 'Notificaciones Judiciales',
       },
     ],
   },
   {
-    title: 'Orders & Purchases',
+    title: 'SERVICIO AL CLIENTE',
     items: [
       {
         href: '/',
-        name: 'Check Order Status',
+        name: 'Bases Legales Promocionales',
       },
       {
         href: '/',
-        name: 'Returns and Exchanges',
+        name: 'Preguntas Frecuentes',
       },
       {
         href: '/',
-        name: 'Product Recall',
+        name: 'Aplicar mi garantía',
       },
       {
         href: '/',
-        name: 'Gift Cards',
+        name: 'Estado de mi recoleccíon',
+      },
+      {
+        href: '/',
+        name: 'Autorización para el Tratamiento de Datos Personales',
+      },
+      {
+        href: '/',
+        name: 'Política de Tratamiento de Datos',
+      },
+      {
+        href: '/',
+        name: 'Terminos y Condiciones',
+      },
+      {
+        href: '/',
+        name: 'Política de venta de productos internacionales',
+      },
+      {
+        href: '/',
+        name: 'Peticiones, quejas o reclamos',
+      },
+      {
+        href: '/',
+        name: 'www.sic.gov.co',
+      },
+      {
+        href: '/',
+        name: '¿Como cuidamos tus datos? ',
       },
     ],
   },
   {
-    title: 'Support & Services',
+    title: 'LINIO LATINOAMÉRICA',
     items: [
       {
         href: '/',
-        name: 'Support Center',
+        name: 'Colombia',
       },
       {
         href: '/',
-        name: 'Schedule a Service',
+        name: 'Chile',
       },
       {
         href: '/',
-        name: 'Contact Us',
+        name: 'Mexico',
+      },
+      {
+        href: '/',
+        name: 'Perú',
       },
     ],
   },
   {
-    title: 'Partnerships',
+    title: 'NOVEDADES',
     items: [
       {
         href: '/',
-        name: 'Affiliate Program',
+        name: 'CyberLunes',
       },
       {
         href: '/',
-        name: 'Advertise with US',
+        name: 'iPhone',
       },
       {
         href: '/',
-        name: 'Market Place',
+        name: 'Solo Hoy Ofertas',
+      },
+      {
+        href: '/',
+        name: 'Despensa, vinos y gourmet',
       },
     ],
   },

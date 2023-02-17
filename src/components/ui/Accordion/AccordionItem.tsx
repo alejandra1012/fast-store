@@ -54,15 +54,15 @@ const AccordionItem = forwardRef<HTMLDivElement, Props>(function AccordionItem(
             <>
               <Icon
                 data-icon={isExpanded ? 'expanded' : true}
-                name="MinusCircle"
-                width={24}
-                height={24}
+                name="CaretUp"
+                width={20}
+                height={20}
               />
               <Icon
                 data-icon={isExpanded ? true : 'collapsed'}
-                name="PlusCircle"
-                width={24}
-                height={24}
+                name="CaretDown"
+                width={20}
+                height={20}
               />
             </>
           }

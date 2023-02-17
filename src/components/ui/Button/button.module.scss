@@ -417,6 +417,7 @@
         fill: #f50;
       }
       @include media(">=notebook") {
+        display: none;
 
       }
     }

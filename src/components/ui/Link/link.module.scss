@@ -102,7 +102,15 @@
     font-size: 17px;
     overflow: hidden;
 
+    @include media(">=notebook"){
+      flex-direction: row;
+     svg {
+        width: 20px !important;
+        height: 20px !important;
+      }
+    }
   }
+
   &[data-fs-link-variant=display]:hover {
     color: #bbb;
   }

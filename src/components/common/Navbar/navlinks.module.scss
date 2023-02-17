@@ -58,6 +58,12 @@
       grid-template-columns: 50% 50%;
 
     }
+    @include media(">=notebook"){
+      [data-fs-navlinks-list]{
+        display: flex;
+        flex-direction: column;
+      }
+    }
     [data-fs-navlinks-list-item]{
       justify-content: center;
     }

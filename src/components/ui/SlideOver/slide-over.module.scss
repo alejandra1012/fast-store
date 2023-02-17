@@ -31,8 +31,11 @@
     width: var(--fs-slide-over-partial-width-mobile);
 
     @include media(">=notebook") {
-      width: 100%;
-      max-width: 100%;
+      width: 85%;
+      max-width: 85%;
+      top: 67px;
+      right: 0;
+      margin: 0 auto;
     }
   }
 
@@ -60,9 +63,20 @@
       transform: translateX(100%);
     }
   }
-  [data-fs-slide-over-size="full"]{
-    @include media(">=notebook"){
-      size: 'full';
+  @include media(">=notebook"){
+    &[data-fs-slide-over-state="in"] {
+      transition: transform var(--fs-slide-over-transition-timing) ease-in;
+      transform: translateY(0);
+    }
+    &[data-fs-slide-over-state="out"] {
+      transition: transform var(--fs-slide-over-transition-timing) ease-out;
+    }
+    &[data-fs-slide-over-direction="leftSide"] {
+      left: 0;
+
+      &[data-fs-slide-over-state="out"] {
+        transform: translateY(-100%);
+      }
     }
   }
 

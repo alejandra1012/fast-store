@@ -23,7 +23,7 @@ function NavbarSubMenu() {
         isOpen
         fade={fade}
         onDismiss={fadeOut}
-        size="full"
+        size="partial"
         direction="leftSide"
         className={styles.fsNavbarSlider}
         onTransitionEnd={() => fade === 'out' && closeNavbar()}

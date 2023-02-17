@@ -57,6 +57,61 @@ const collections = [
     name: 'Hogar',
     href: '/https://www.falabella.com.co/falabella-co',
   },
+  {
+    icon: 'Tag',
+    name: 'Ferretería y Automotriz',
+    href: '/solo-Hoy',
+  },
+  {
+    icon: 'Storefront',
+    name: 'Moda y Accesorios',
+    href: '/top-ventas',
+  },
+  {
+    icon: 'Supermercado y Mascotas',
+    name: 'Supermercado y Mascotas',
+    href: '/tiendas-oficiales',
+  },
+  {
+    icon: 'Deportes',
+    name: 'Deportes',
+    href: '/vender-ene-linio',
+  },
+  {
+    icon: 'Desktop',
+    name: 'Belleza',
+    href: '/preguntas-frecuentes',
+  },
+  {
+    icon: 'Games',
+    name: 'Salud y Bienestar',
+    href: '/recently-viewed-products',
+  },
+  {
+    icon: 'Electrodomesticos',
+    name: 'Jueguetes, Niños y Bebes',
+    href: '/cm/cmr-banco-falabella',
+  },
+  {
+    icon: 'Alert',
+    name: 'Camaras y Lentes',
+    href: '/https://www.falabella.com.co/falabella-co',
+  },
+  {
+    icon: 'Electrodomesticos',
+    name: 'Productos Internacionales',
+    href: '/cm/cmr-banco-falabella',
+  },
+  {
+    icon: 'Alert',
+    name: 'Más',
+    href: '/https://www.falabella.com.co/falabella-co',
+  },
+  {
+    icon: 'Alert',
+    name: 'Grupo Falabella',
+    href: '/https://www.falabella.com.co/falabella-co',
+  },
 ]
 
 function NavLinksMenu2({ onClickLink, classes = '' }: NavLinksProps) {

@@ -14,8 +14,7 @@ import styles from './navbar-slider.module.scss'
 import NavbarSubMenu from './NavbarSubMenu'
 import NavbarSubMenu2 from './NavbarSubMenu2'
 import NavbarSubMenu3 from './NavbarSubMenu3'
-// import NavLinks from './NavLinks'
-import NavLinksMenu2 from './NavLinksMenu2'
+import NavLinks from './NavLinks'
 
 function NavbarSlider() {
   const [openSubMenu, setOpenSumenu] = useState(false)
@@ -80,7 +79,7 @@ function NavbarSlider() {
           />
         </>
         <div data-fs-navbar-slider-content>
-          <NavLinksMenu2 onClickLink={fadeOut} />
+          <NavLinks onClickLink={fadeOut} />
           {openSubMenu && <NavbarSubMenu />}
           {openSubMenu2 && <NavbarSubMenu2 />}
           {openSubMenu3 && <NavbarSubMenu3 />}

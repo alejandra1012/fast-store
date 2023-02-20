@@ -28,28 +28,38 @@ export const incentivesMockHeader = [
 
 export const incentivesMockFooter = [
   {
-    icon: 'ShieldCheck',
-    firstLineText: 'Trusted',
-    secondLineText: 'by Safecon',
+    icon: 'Visa2',
+    firstLineText: 'Visa',
+    secondLineText: '',
   },
   {
-    icon: 'Medal',
-    firstLineText: 'Quality',
-    secondLineText: 'Products',
+    icon: 'Mastercard2',
+    firstLineText: 'MasterCard',
+    secondLineText: '',
   },
   {
-    icon: 'CircleWavyCheck',
-    firstLineText: '3-year',
-    secondLineText: 'Guarantee',
+    icon: 'American',
+    firstLineText: 'American Express',
+    secondLineText: '',
   },
   {
-    icon: 'Storefront',
-    firstLineText: 'Pickup',
-    secondLineText: 'Options',
+    icon: 'Tv',
+    firstLineText: 'Tarjetas Codensa',
+    secondLineText: '',
   },
   {
-    icon: 'Truck',
-    firstLineText: 'Free',
-    secondLineText: 'Shippping',
+    icon: 'Pse',
+    firstLineText: 'PSE',
+    secondLineText: '',
+  },
+  {
+    icon: 'Efecty',
+    firstLineText: 'Efecty',
+    secondLineText: '',
+  },
+  {
+    icon: 'Cash',
+    firstLineText: 'Pago contra entrega',
+    secondLineText: '',
   },
 ]

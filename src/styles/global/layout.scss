@@ -38,17 +38,25 @@ main,
   @include media(">=notebook") {
     padding-top: var(--fs-grid-padding);
     padding-bottom: var(--fs-grid-padding);
+      padding-left: 7vw;
+      padding-right: 7vw;
+
   }
 }
 
 .layout__content {
   box-sizing: border-box;
   width: 100%;
-  max-width: var(--fs-grid-breakpoint-notebook);
+  // max-width: var(--fs-grid-breakpoint-notebook);
   padding-right: var(--fs-grid-padding);
   padding-left: var(--fs-grid-padding);
   margin-right: auto;
   margin-left: auto;
+  @include media(">=notebook") {
+      padding-left: 0;
+      padding-right: 0;
+
+  }
 }
 .layout__content :global(.label__cart){
 color: #fff;

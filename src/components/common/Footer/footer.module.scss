@@ -45,13 +45,21 @@
 
   [data-fs-footer-title] {
     margin-bottom: var(--fs-footer-title-margin-bottom);
-    font-size: var(--fs-footer-title-size);
-    font-weight: var(--fs-footer-title-weight);
-    line-height: var(--fs-footer-title-line-height);
+    // color: #333;
+    font-family: Arial,Roboto,"-apple-system",Helvetica,sans-serif;
+    font-size: .8rem;
+    font-weight: 400;
+
 
     @include media("<notebook") {
       text-align: center;
     }
+  }
+  [data-fs-footer-title-follow]{
+    padding-top: 20px;
+    font-family: Arial,Roboto,"-apple-system",Helvetica,sans-serif;
+    font-size: .8rem;
+    font-weight: 400;
   }
 
   [data-fs-footer-note],
@@ -82,7 +90,7 @@
 
   [data-fs-footer-nav] {
     @include media(">=notebook") {
-      row-gap: var(--fs-footer-spacing-vertical-notebook);
+      // row-gap: var(--fs-footer-spacing-vertical-notebook);
       padding-bottom: var(--fs-footer-spacing-vertical-notebook);
     }
   }
@@ -117,7 +125,7 @@
 
   [data-fs-footer-social] {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 
     @include media("<notebook") {
       padding: var(--fs-footer-spacing-vertical-mobile) 0 var(--fs-spacing-3);

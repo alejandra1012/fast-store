@@ -8,7 +8,8 @@
   // Default properties
   --fs-incentives-bkg-color               : var(--fs-color-primary-bkg-light);
 
-  --fs-incentives-gap                     : var(--fs-spacing-4);
+  --fs-incentives-gap                     : var( --fs-spacing-4);
+  --fs-incentives-gap-desktop             : var( --fs-spacing-7);
   --fs-incentives-padding-top             : var(--fs-incentives-gap);
   --fs-incentives-padding-bottom          : var(--fs-incentives-gap);
 
@@ -17,12 +18,14 @@
 
   // Title
   --fs-incentives-title-size              : var(--fs-text-size-1);
+  --fs-incentives-title-size-mobile       : var(--fs-text-size-0);
   --fs-incentives-title-weight            : var(--fs-text-weight-bold);
   --fs-incentives-title-line-height       : 1.42;
   --fs-incentives-title-color             : var(--fs-color-text);
 
   // Description
   --fs-incentives-description-size        : var(--fs-incentives-title-size);
+  --fs-incentives-description-size-mobile : var(--fs-incentives-title-size-mobile);
   --fs-incentives-description-line-height : 1.14;
   --fs-incentives-description-color       : var(--fs-incentives-title-color);
 
@@ -40,12 +43,21 @@
 
   [data-fs-list] {
     display: flex;
-    width: fit-content;
-    overflow-x: auto;
-    overflow-y: hidden;
+    // width: fit-content;
+    // overflow-x: auto;
+    // overflow-y: hidden;
 
     @include media(">=notebook") {
       justify-content: center;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      padding-top: 12px;
+      padding-bottom: 20px;
+    }
+    @include media("<notebook") {
+      row-gap: var(--fs-spacing-2);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
     }
   }
 
@@ -54,19 +66,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    row-gap: var(--fs-spacing-3);
 
-    @include media("<notebook") {
-      row-gap: var(--fs-spacing-0);
+
+
+    @include media("<notebook"){
+      align-items: flex-start;
     }
 
-    @include media(">=notebook") {
-      flex-direction: row;
-
-      [data-fs-incentive-content] {
-        margin-left: var(--fs-spacing-2);
-        text-align: left;
-      }
-    }
   }
 
   [data-fs-incentive-title] {
@@ -78,10 +85,11 @@
 
   [data-fs-incentive-description] {
     display: block;
-    font-size: var(--fs-incentives-description-size);
+    font-size: 12.8px;
     line-height: var(--fs-incentives-description-line-height);
     color: var(--fs-incentives-description-color);
     white-space: nowrap;
+
   }
 
   [data-fs-incentive-content] {
@@ -89,7 +97,12 @@
   }
 
   [data-fs-incentive-icon] {
-    color: var(--fs-incentives-icon-color);
+    // color: var(--fs-incentives-icon-color);
+    fill: #666;
+    @include media("<notebook") {
+      // row-gap: var(--fs-spacing-0);
+      display: none;
+    }
   }
 
   // --------------------------------------------------------
@@ -114,9 +127,13 @@
 
   &[data-fs-incentives-variant="horizontal"] {
     li:not(:last-child) {
-      padding-right: var(--fs-incentives-gap);
-      margin-right: var(--fs-incentives-gap);
-      border-right: var(--fs-incentives-border-width) solid var(--fs-incentives-border-color);
+      padding-right: var(--fs-incentives-gap-desktop);
+      margin-right: var(--fs-incentives-gap-desktop);
+      // border-right: var(--fs-incentives-border-width) solid var(--fs-incentives-border-color);
+      @include media("<notebook"){
+        padding-right: 0;
+        margin-right:0;
+      }
     }
   }
 }

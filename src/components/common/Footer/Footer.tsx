@@ -47,7 +47,7 @@ export function Footer({
 
         {sectionSocial && (
           <section data-fs-footer-social>
-            <p data-fs-footer-title>Follow us</p>
+            <p data-fs-footer-title-follow>SÍGUENOS</p>
             <UIList variant="unordered">
               <li>
                 <Link
@@ -57,7 +57,7 @@ export function Footer({
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Icon width="30px" height="30px" name="Facebook2" />
+                  <Icon width="28px" height="28px" name="Facebook2" />
                 </Link>
               </li>
               <li>
@@ -68,7 +68,7 @@ export function Footer({
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Icon width="30px" height="30px" name="Twitter2" />
+                  <Icon width="28px" height="28px" name="Twitter2" />
                 </Link>
               </li>
               <li>
@@ -79,7 +79,7 @@ export function Footer({
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Icon width="30px" height="30px" name="Youtube" />
+                  <Icon width="28px" height="28px" name="Youtube" />
                 </Link>
               </li>
             </UIList>

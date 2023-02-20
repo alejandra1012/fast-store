@@ -41,8 +41,8 @@ function Incentives({
               <Icon
                 data-fs-incentive-icon
                 name={incentive.icon}
-                width={32}
-                height={32}
+                width={42}
+                height={42}
               />
               <div data-fs-incentive-content>
                 {incentive.title && (

@@ -43,12 +43,12 @@ export const incentivesMockFooter = [
     secondLineText: '',
   },
   {
-    icon: 'Tv',
+    icon: 'Card',
     firstLineText: 'Tarjetas Codensa',
     secondLineText: '',
   },
   {
-    icon: 'Pse',
+    icon: 'Card',
     firstLineText: 'PSE',
     secondLineText: '',
   },

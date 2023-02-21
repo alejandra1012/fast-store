@@ -92,7 +92,7 @@ export function Footer({
 
         {sectionPaymentMethods && (
           <UIPaymentMethods data-fs-footer-payment-methods>
-            <p data-fs-footer-title>Payment Methods</p>
+            <p data-fs-footer-title />
             <UIList>
               <li>
                 <Icon width="34px" height="24px" name="Visa" />

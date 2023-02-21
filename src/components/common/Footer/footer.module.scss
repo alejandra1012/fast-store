@@ -73,7 +73,7 @@
 
     @include media(">=notebook") {
       display: grid;
-      grid-template-columns: repeat(12, 1fr);
+      grid-template-columns: repeat(13, 1fr);
       column-gap: var(--fs-footer-spacing-horizontal-notebook);
     }
 
@@ -114,12 +114,20 @@
       padding-top: 0;
     }
   }
+  [data-fs-footerLinks="2"]{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 5px;
+    column-gap: 60px;
+  }
 
   [data-fs-footer-social],
   [data-fs-footer-payment-methods] {
     @include media(">=notebook") {
       grid-column: 11 / span 2;
       margin-left: calc(-1 * var(--fs-spacing-3));
+      border-left: 1px solid #ccc;
+      padding-left: 20px;
     }
   }
 
@@ -128,7 +136,8 @@
     flex-direction: row;
 
     @include media("<notebook") {
-      padding: var(--fs-footer-spacing-vertical-mobile) 0 var(--fs-spacing-3);
+      padding: var(--fs-spacing-3) 0 var(--fs-spacing-3);
+      border-top: 1px solid #ccc;
     }
 
     [data-fs-list] {
@@ -216,7 +225,7 @@
       line-height: 20px;
       text-decoration: none;
       font-family: Arial,Roboto,"-apple-system",Helvetica,sans-serif;
-      font-size: 12.8px;
+      font-size: 12px;
     }
 
     @include media(">=notebook") {

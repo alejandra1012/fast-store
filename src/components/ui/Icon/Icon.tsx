@@ -28,7 +28,6 @@ function Icon({ name, weight = 'regular', ...otherProps }: Props) {
   return (
     <svg {...otherProps} strokeWidth={mapWeightToValue[weight]}>
       <use href={`/icons.svg#${name}`} />
-      <use href={`/iconsLinio.svg#${name}`} />
     </svg>
   )
 }

@@ -11,6 +11,8 @@
   --fs-footer-spacing-horizontal-notebook         : var(--fs-grid-gap-3);
 
   --fs-footer-bkg-color                           : var(--fs-color-neutral-bkg);
+  --fs-footer-bkg-color-linio                     :#eee;
+
 
   // Divisor
   --fs-footer-divisor-border-width                : var(--fs-border-width);
@@ -32,7 +34,7 @@
   // --------------------------------------------------------
 
   &[data-fs-footer] {
-    background-color: var(--fs-footer-bkg-color);
+    background-color: var(--fs-footer-bkg-color-linio);
   }
 
   @include media("<notebook") {
@@ -163,15 +165,15 @@
     }
   }
 
-  [data-fs-footer-payment-methods] {
-    @include media("<notebook") {
-      margin: var(--fs-footer-spacing-vertical-mobile) auto;
-    }
+  // [data-fs-footer-payment-methods] {
+  //   @include media("<notebook") {
+  //     margin: var(--fs-footer-spacing-vertical-mobile) auto;
+  //   }
 
-    @include media(">=notebook") {
+  //   @include media(">=notebook") {
 
-    }
-  }
+  //   }
+  // }
 
   [data-fs-icon] {
     @include media(">=notebook") {

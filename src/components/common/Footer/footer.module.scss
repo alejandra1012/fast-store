@@ -73,8 +73,8 @@
 
     @include media(">=notebook") {
       display: grid;
-      grid-template-columns: repeat(13, 1fr);
-      column-gap: var(--fs-footer-spacing-horizontal-notebook);
+      grid-template-columns: repeat(10, 1fr);
+      // column-gap: var(--fs-footer-spacing-horizontal-notebook);
     }
 
     &:not(:first-of-type)::before {
@@ -137,6 +137,7 @@
   [data-fs-footer-social] {
     display: flex;
     flex-direction: column;
+    width: 280px;
 
     @include media("<notebook") {
       padding: var(--fs-spacing-3) 0 var(--fs-spacing-3);
@@ -148,7 +149,7 @@
       // justify-content: center;
 
       @include media(">=notebook") {
-        justify-content: space-between;
+        justify-content: flex-start;
       }
 
       [data-fs-link] {
@@ -168,7 +169,7 @@
     }
 
     @include media(">=notebook") {
-      order: 3;
+
     }
   }
 

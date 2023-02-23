@@ -89,6 +89,7 @@ export function Footer({
                 <UIList>
                   <li>
                     <Image
+                      data-fs-footer-apps
                       src="https://itglobers.vtexassets.com/arquivos/play-store.png"
                       width={125}
                       height={37}
@@ -97,6 +98,7 @@ export function Footer({
                   </li>
                   <li>
                     <Image
+                      data-fs-footer-apps
                       src="https://itglobers.vtexassets.com/arquivos/app-store.png"
                       width={125}
                       height={37}
@@ -105,6 +107,7 @@ export function Footer({
                   </li>
                   <li>
                     <Image
+                      data-fs-footer-apps
                       src="https://itgloberspartnercl.vtexassets.com/arquivos/footer-appgalley.jpg"
                       width={125}
                       height={37}
@@ -114,6 +117,14 @@ export function Footer({
                 </UIList>
               </UIPaymentMethods>
             )}
+            <div data-fs-footer-sic>
+              <img
+                src="https://itgloberspartnercl.vtexassets.com/arquivos/logo-sic-footer.png"
+                alt="sic"
+                width="60%"
+              />
+              <SROnly text="sic" />
+            </div>
           </section>
         )}
       </div>

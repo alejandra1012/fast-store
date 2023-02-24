@@ -402,7 +402,12 @@
       height: var(--fs-button-height);
       padding: var(--fs-button-icon-padding);
       border-width: 0;
+
+      @include media("<phone"){
+        padding-left: 0;
+      }
     }
+
     &[data-fs-navbar-sub-menu-button]{
       color: #666;
       font-weight: bold;

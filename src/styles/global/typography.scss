@@ -58,6 +58,14 @@ h1, h2, h3, h4, h5, h6, p, ul {
 .text__legend {
   font-size: var(--fs-text-size-1);
   line-height: 1.7;
+
+  &[data-fs-footer-copyright]{
+    color: #aaa;
+    font-size: .8rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    padding-top: 10px;
+  }
 }
 
 .text__tiny {

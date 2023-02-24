@@ -129,11 +129,11 @@ const links = [
       },
       {
         href: '/',
-        name: 'Chile',
+        name: 'Mexico',
       },
       {
         href: '/',
-        name: 'Mexico',
+        name: 'Chile',
       },
       {
         href: '/',
@@ -171,11 +171,12 @@ type LinkItem = {
 
 interface LinksListProps {
   items: LinkItem[]
+  index?: number
 }
 
-function LinksList({ items }: LinksListProps) {
+function LinksList({ items, index }: LinksListProps) {
   return (
-    <UIList>
+    <UIList data-fs-footerLinks={index}>
       {items.map((item) => (
         <li key={item.name}>
           <Link variant="footer" href={item.href}>
@@ -219,10 +220,10 @@ function FooterLinks() {
 
       <div className="hidden-mobile">
         <nav data-fs-footer-links-columns>
-          {links.map((section) => (
+          {links.map((section, index) => (
             <div key={section.title}>
               <p data-fs-footer-title>{section.title}</p>
-              <LinksList items={section.items} />
+              <LinksList items={section.items} index={index} />
             </div>
           ))}
         </nav>

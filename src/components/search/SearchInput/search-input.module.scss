@@ -83,6 +83,10 @@
         box-shadow: var(--fs-search-input-box-shadow);
       }
 
+      @include media("<phone"){
+        padding: 0;
+      }
+
       @include input-focus-ring;
 
       [data-fs-search-input-dropdown-visible="true"] & {

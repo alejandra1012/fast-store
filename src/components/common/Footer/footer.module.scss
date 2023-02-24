@@ -75,8 +75,8 @@
 
     @include media(">=notebook") {
       display: grid;
-      grid-template-columns: repeat(10, 1fr);
-      // column-gap: var(--fs-footer-spacing-horizontal-notebook);
+      grid-template-columns: repeat(13, 1fr);
+      column-gap: var(--fs-footer-spacing-horizontal-notebook);
     }
 
     &:not(:first-of-type)::before {
@@ -139,7 +139,7 @@
   [data-fs-footer-social] {
     display: flex;
     flex-direction: column;
-    width: 280px;
+    width: 100%;
 
     @include media("<notebook") {
       padding: var(--fs-spacing-3) 0 var(--fs-spacing-3);
@@ -189,7 +189,6 @@
 
     [data-fs-list] {
       display: grid;
-      // grid-template-columns: repeat(4, minmax(0, max-content));
       row-gap: var(--fs-spacing-1);
       justify-content: space-between;
       margin-top: var(--fs-spacing-3);
@@ -197,9 +196,13 @@
       li { display: flex; }
 
       @include media("<notebook") {
-        column-gap: var(--fs-grid-gap-2);
+      column-gap: var(--fs-grid-gap-2);
       grid-template-columns: repeat(2, minmax(0, max-content));
+      }
 
+      @include media(">=tablet","<=laptop"){
+        display: flex;
+        justify-content: center;
       }
     }
   }
@@ -274,4 +277,10 @@
       grid-column: span 10;
     }
   }
+@include media(">=notebook"){
+  [data-fs-footer-sic-img]{
+    padding-left: 125px;
+    width: 300px;
+  }
+}
 }

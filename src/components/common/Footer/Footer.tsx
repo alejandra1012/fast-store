@@ -119,9 +119,10 @@ export function Footer({
             )}
             <div data-fs-footer-sic>
               <img
+                data-fs-footer-sic-img
                 src="https://itgloberspartnercl.vtexassets.com/arquivos/logo-sic-footer.png"
                 alt="sic"
-                width="60%"
+                width={180}
               />
               <SROnly text="sic" />
             </div>

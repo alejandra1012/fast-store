@@ -50,6 +50,14 @@
 
   &[data-fs-slide-over-direction="leftSide"] {
     left: 0;
+    overflow-y: scroll;
+
+    &[data-fs-nabvar-slider-ppal]{
+      display: flex;
+      width: 100%;
+      background-color: transparent;
+    }
+
 
     &[data-fs-slide-over-state="out"] {
       transform: translateX(-100%);

@@ -286,7 +286,7 @@
     background-color: var(--fs-button-tertiary-bkg-color);
     border: var(--fs-button-border-width) solid var(--fs-button-tertiary-border-color);
     font-family: arial;
-    font-size: var( --fs-text-size-base );
+    font-size: 16px;
     font-weight: 100;
     white-space: nowrap;
 
@@ -403,6 +403,10 @@
       padding: var(--fs-button-icon-padding);
       border-width: 0;
 
+     &[data-fs-navbar-slider-button]{
+      background-color: #333;
+     }
+
       @include media("<phone"){
         padding-left: 0;
       }
@@ -417,9 +421,28 @@
     &[data-fs-navbar-open-sub-menu-button]{
       width: 100%;
       justify-content: flex-start;
+      padding-bottom: 40px;
+      padding-top: 40px;
+      padding-left: 15px;
+      border-bottom: 1px solid #ccc;
       span {
         color: #666;
         fill: #f50;
+        font-size: 14.4px;
+      }
+      @include media(">=notebook") {
+        display: none;
+
+      }
+    }
+    &[data-fs-navbar-open-sub-menu-button-linio]{
+      width: 100%;
+      justify-content: flex-start;
+      background-color: #fff;
+      span {
+        color: #666;
+        fill: #f50;
+        font-size: 14.4px;
       }
       @include media(">=notebook") {
         display: none;
@@ -437,4 +460,6 @@
   [data-fs-navbar-open-sub-menu-button] [data-fs-button-label]{
     color: #666;
   }
+
+
 }

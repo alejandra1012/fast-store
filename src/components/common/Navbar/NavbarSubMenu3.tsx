@@ -40,7 +40,6 @@ function NavbarSubMenu3() {
         <div data-fs-navbar-slider-content>
           <NavLinksMenu3 onClickLink={fadeOut} />
         </div>
-        <footer data-fs-navbar-slider-footer />
       </SlideOver>
     </>
   )

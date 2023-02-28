@@ -30,6 +30,7 @@ function NavbarSlider() {
   return (
     <>
       <SlideOver
+        data-fs-nabvar-slider-ppal
         isOpen
         fade={fade}
         onDismiss={fadeOut}
@@ -38,53 +39,67 @@ function NavbarSlider() {
         className={styles.fsNavbarSlider}
         onTransitionEnd={() => fade === 'out' && closeNavbar()}
       >
-        <header data-fs-navbar-slider-header>
-          <Suspense fallback={<ButtonSignInFallback />}>
-            <ButtonSignInMenu />
-            <ButtonOrdersMenu />
-          </Suspense>
-
+        <div data-fs-navbar-slider-header-container>
+          <header data-fs-navbar-slider-header>
+            <Suspense fallback={<ButtonSignInFallback />}>
+              <ButtonSignInMenu />
+              <ButtonOrdersMenu />
+            </Suspense>
+          </header>
+          <>
+            <Button
+              data-fs-navbar-open-sub-menu-button
+              aria-label="Open SubMenu"
+              icon={<Icon name="UserLinio" width={25} height={25} />}
+              label="Mi Cuenta"
+              onClick={handleClick}
+            />
+          </>
+          <>
+            <Button
+              data-fs-navbar-open-sub-menu-button
+              aria-label="Open SubMenu1"
+              icon={<Icon name="Grid" width={17} height={17} />}
+              label="Categorias"
+              onClick={handleClick2}
+            />
+          </>
+          <>
+            <Button
+              data-fs-navbar-open-sub-menu-button-linio
+              aria-label="Open SubMenu2"
+              icon={<Icon name="" width={17} height={17} />}
+              label="Beneficios Linio"
+              onClick={handleClick3}
+            />
+          </>
+          <div data-fs-navbar-slider-content>
+            <NavLinks onClickLink={fadeOut} />
+            {openSubMenu && <NavbarSubMenu />}
+            {openSubMenu2 && <NavbarSubMenu2 />}
+            {openSubMenu3 && <NavbarSubMenu3 />}
+          </div>
+          <footer data-fs-navbar-slider-footer>
+            <a data-fs-navbar-slider-footer-link href="/some/valid/uri">
+              COMPRA DESDE NUESTRA APP Y RECIBE GRANDES BENEFICIOS
+              <img
+                data-fs-navbar-slider-footer-img
+                src="https://itglobers.vtexassets.com/arquivos/descarga-app.jpg"
+                alt="sic"
+                width={50}
+                height={33}
+              />
+            </a>
+          </footer>
+        </div>
+        <div data-fs-navbar-slider-button-close>
           <Button
             data-fs-navbar-slider-button
             aria-label="Close Menu"
             icon={<Icon name="X" width={32} height={32} />}
             onClick={fadeOut}
           />
-        </header>
-        <>
-          <Button
-            data-fs-navbar-open-sub-menu-button
-            aria-label="Open SubMenu"
-            icon={<Icon name="UserLinio" width={25} height={25} />}
-            label="Mi Cuenta"
-            onClick={handleClick}
-          />
-        </>
-        <>
-          <Button
-            data-fs-navbar-open-sub-menu-button
-            aria-label="Open SubMenu1"
-            icon={<Icon name="Grid" width={17} height={17} />}
-            label="Categorias"
-            onClick={handleClick2}
-          />
-        </>
-        <>
-          <Button
-            data-fs-navbar-open-sub-menu-button
-            aria-label="Open SubMenu2"
-            icon={<Icon name="" width={17} height={17} />}
-            label="Beneficios Linio"
-            onClick={handleClick3}
-          />
-        </>
-        <div data-fs-navbar-slider-content>
-          <NavLinks onClickLink={fadeOut} />
-          {openSubMenu && <NavbarSubMenu />}
-          {openSubMenu2 && <NavbarSubMenu2 />}
-          {openSubMenu3 && <NavbarSubMenu3 />}
         </div>
-        <footer data-fs-navbar-slider-footer />
       </SlideOver>
     </>
   )

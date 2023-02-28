@@ -40,7 +40,6 @@ function NavbarSubMenu2() {
         <div data-fs-navbar-slider-content-submenu2>
           <NavLinksMenu2 onClickLink={fadeOut} />
         </div>
-        <footer data-fs-navbar-slider-footer />
       </SlideOver>
     </>
   )

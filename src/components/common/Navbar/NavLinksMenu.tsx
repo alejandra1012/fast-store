@@ -64,7 +64,7 @@ function NavLinksMenu({ onClickLink, classes = '' }: NavLinksProps) {
     <nav className={`${styles.fsNavlinks} ${classes}`}>
       <div className="layout__content">
         {/* <RegionalizationButton /> */}
-        <UIList data-fs-navlinks-list>
+        <UIList data-fs-navlinks-list-linio>
           {collections.map(({ href, name, icon }: CollectionType) => (
             <li key={name} data-fs-navlinks-list-item>
               <Link

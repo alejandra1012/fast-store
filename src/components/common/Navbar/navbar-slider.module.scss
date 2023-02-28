@@ -1,4 +1,4 @@
-@import "src/styles/scaffold";
+@import 'src/styles/scaffold';
 
 .fs-navbar-slider {
   // --------------------------------------------------------
@@ -24,43 +24,36 @@
   // --------------------------------------------------------
   // Structural Styles
   // --------------------------------------------------------
-
+  [data-fs-navbar-slider-header-container] {
+    background-color: #fff;
+  }
 
   // padding: var(--fs-navbar-slider-padding);
-[data-fs-navbar-slider-header]
-   {
-    position: relative;
+  [data-fs-navbar-slider-header] {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-top: 16px;
     padding-bottom: 16px;
-    // padding-right: 30px;
+    padding-right: 30px;
     padding-left: 30px;
     background-color: #eee;
     border-bottom: 1px solid #ccc;
-  @include media(">=notebook"){
-    display: none;
-  }
-
-    [data-fs-navbar-slider-button] {
-      margin-right: var(--fs-navbar-slider-header-button-margin-right);
-      background-color: #373a3c;
-      position: relative;
-      right: -40px;
-      bottom: 17px;
+    @include media('>=notebook') {
+      display: none;
     }
   }
-  [data-fs-navbar-slider-header-submenu3]{
+
+  [data-fs-navbar-slider-header-submenu3] {
     padding-left: 50px;
     background-color: #f7f7f7;
     border-bottom: 1px solid #ccc;
 
-    [data-fs-navbar-sub-menu3-button]{
-     color: #666;
-     font-weight: bold;
-     font-size: 1rem;
-     padding-left: 20px;
+    [data-fs-navbar-sub-menu3-button] {
+      color: #666;
+      font-weight: bold;
+      font-size: 1rem;
+      padding-left: 20px;
     }
   }
 
@@ -76,29 +69,46 @@
   }
 
   [data-fs-navbar-slider-footer] {
+    background-color: #333;
+    padding: 12px;
     padding-top: var(--fs-navbar-slider-footer-padding-top);
-    margin-top: var(--fs-navbar-slider-footer-margin-top);
 
-    [data-fs-button-signin-link] {
-      width: fit-content;
-      padding-left: 0;
+    [data-fs-navbar-slider-footer-link] {
+      display: flex;
+      padding-right: 15px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 25px;
     }
   }
+  [data-fs-button-signin-link] {
+    width: fit-content;
+    padding-left: 0;
+  }
   [data-fs-navbar-slider-content] {
-
-    [data-fs-navlinks-link]{
+    background-color: #fff;
+    [data-fs-navlinks-link] {
       color: #666;
+      font-size: 14.4px;
     }
-    @include media(">=notebook"){
-      [data-fs-navlinks-list]{
+    [data-fs-navlinks-list] {
+      padding-left: 16px;
+    }
+    @include media('>=notebook') {
+      [data-fs-navlinks-list] {
         flex-direction: column;
       }
     }
   }
   [data-fs-navbar-slider--header] {
-
-    [data-fs-navbar-sub-menu-button]{
+    [data-fs-navbar-sub-menu-button] {
       color: #666;
     }
+  }
+  [data-fs-navbar-slider-button-close]{
+    position: sticky;
+    top: 0;
   }
 }

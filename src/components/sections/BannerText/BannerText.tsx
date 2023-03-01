@@ -65,6 +65,10 @@ function BannerText({
             data-fs-banner-text-heading
             data-fs-banner-text-color-variant={colorVariant}
           >
+            <img
+              src="https://itgloberspartnercl.vtexassets.com/arquivos/logo-sic-footer.png"
+              alt=""
+            />
             <h2>{title}</h2>
             {variant === 'secondary' && caption && <p>{caption}</p>}
           </div>

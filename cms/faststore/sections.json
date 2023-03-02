@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Shelf",
+    "schema": {
+      "title": "Shelf",
+      "description": "Displays a list of products in a carousel.",
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Shelf Title"
+        },
+        "searchParams": {
+          "type": "object",
+          "title": "Search parameters for Shelf",
+          "properties": {
+            "from": {
+              "type": "number",
+              "title": "from"
+            },
+            "to": {
+              "type": "number",
+              "title": "to"
+            },
+            "collection": {
+              "type": "string",
+              "title": "Collection"
+            },
+            "hideUnavailableItems": {
+              "default": true,
+              "type": "boolean",
+              "title": "Hide unavailable items"
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "RichText",
+    "schema": {
+      "title": "Rich Text",
+      "description": "Displays text written in Markdown.",
+      "type": "object",
+      "properties": {
+        "content": {
+          "type": "string",
+          "title": "Text",
+          "widget": {
+            "ui:widget": "draftjs-rich-text"
+          }
+        }
+      }
+    }
+  }
+]

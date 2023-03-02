@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import 'src/styles/pages/homepage.scss'
 
 import { graphql } from 'gatsby'
@@ -69,6 +70,7 @@ function Page(props: Props) {
         If needed, wrap your component in a <Section /> component
         (not the HTML tag) before rendering it here.
       */}
+      {console.log('index', cmsHome)}
       <RenderPageSections sections={cmsHome?.sections} />
       <Newsletter
         title="Get News and Special Offers!"

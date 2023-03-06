@@ -20,7 +20,9 @@ main,
   background: var(--fs-body-bkg);
   padding: 5vh 7vw;
 
-
+  @include media("<=laptop"){
+    padding: 5vh 8px;
+  }
 }
 
 .layout__section {

@@ -4,6 +4,10 @@
 [data-fs-navlinks-list-linio]{
  display: flex;
  column-gap: 50px;
+
+ @include media("<=phonemid"){
+  display: none;
+ }
 }
 
 [data-fs-navlinks-link-menu]{
@@ -14,6 +18,14 @@
   svg{
     margin-right: 20px;
   }
+
+  @include media(">=tablet","<laptop"){
+    flex-direction: column;
+    text-align: center;
+    svg{
+      margin-right: 0;
+    }
+   }
 }
 
 }

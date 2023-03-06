@@ -4,6 +4,8 @@ import Hero from 'src/components/sections/Hero'
 import IncentivesHeader from 'src/components/sections/Incentives/IncentivesHeader'
 import ProductShelf from 'src/components/sections/ProductShelf'
 import ProductTiles from 'src/components/sections/ProductTiles'
+// import Shelf from 'src/components/sections/Shelf'
+// import RichText from 'src/components/sections/RichText'
 
 /**
  * Sections: Components imported from '../components/sections' only.
@@ -35,11 +37,9 @@ function RenderPageSections({ sections }: Props) {
         const Component = COMPONENTS[name]
 
         if (!Component) {
-          console.info(
+          throw new Error(
             `Could not find component for block ${name}. Add a new component for this block or remove it from the CMS`
           )
-
-          return <></>
         }
 
         return <Component key={`cms-section-${index}`} {...data} />

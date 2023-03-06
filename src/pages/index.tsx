@@ -9,6 +9,7 @@ import type { HomePageQueryQuery } from '@generated/graphql'
 import RenderPageSections from 'src/components/cms/RenderPageSections'
 import { getCMSPageDataByContentType } from 'src/cms/client'
 import type { ContentData } from '@vtex/client-cms'
+import LinkTextHome from 'src/components/sections/LinkTextHome/LinkTextHome'
 import { useSession } from 'src/sdk/session'
 import Newsletter from 'src/components/sections/Newsletter'
 
@@ -72,6 +73,7 @@ function Page(props: Props) {
       */}
       {console.log('index', cmsHome)}
       <RenderPageSections sections={cmsHome?.sections} />
+      <LinkTextHome />
       <Newsletter
         title="Get News and Special Offers!"
         description="Receive our news and promotions in advance. Enjoy and get 10% off your first purchase. For more information click here."

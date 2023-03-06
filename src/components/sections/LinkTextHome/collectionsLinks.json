@@ -1,0 +1,27 @@
+[
+  {
+    "icon": "Phone",
+    "name": "Descarga la App",
+    "href": "/solo-Hoy"
+  },
+  {
+    "icon": "Cmr-puntos",
+    "name": "Descuentos Banco Falabella",
+    "href": "/top-ventas"
+  },
+  {
+    "icon": "Storefront",
+    "name": "Retiro en Tienda",
+    "href": "/tiendas-oficiales"
+  },
+  {
+    "icon": "Plane",
+    "name": "Productos internacionales",
+    "href": "/vender-ene-linio"
+  },
+  {
+    "icon": "Star",
+    "name": "Mejor Calificados",
+    "href": "/preguntas-frecuentes"
+  }
+]

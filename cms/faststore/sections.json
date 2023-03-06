@@ -1,0 +1,144 @@
+[
+  {
+    "name": "LinksCategoriasHome",
+    "schema": {
+      "title": "Links Categories Home",
+      "description": "Displays links with icons.",
+      "type": "object",
+      "properties": {
+        "icon": {
+          "type": "string",
+          "title": "Icon",
+          "enumNames": [
+            "Bell",
+            "BellRinging",
+            "Checked",
+            "Info",
+            "Truck",
+            "User"
+          ],
+          "enum": ["Bell", "BellRinging", "Checked", "Info", "Truck", "User"]
+        },
+        "linkText": {
+          "type": "string",
+          "title": "Link text"
+        },
+        "content": {
+          "type": "string",
+          "title": "Text"
+        }
+      }
+    }
+  },
+  {
+    "name": "BannerText",
+    "schema": {
+      "title": "Banner Text",
+      "description": "Add a quick promotion with a text/action pair",
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "caption": {
+          "type": "string"
+        },
+        "actionPath": {
+          "type": "string",
+          "title": "Action link"
+        },
+        "actionLabel": {
+          "type": "string",
+          "title": "Action label"
+        },
+        "colorVariant": {
+          "type": "string",
+          "title": "Color Variant",
+          "enumNames": ["Main", "Light", "Accent"],
+          "enum": ["main", "light", "accent"]
+        },
+        "variant": {
+          "type": "string",
+          "title": "Variant",
+          "enumNames": ["Primary", "Secondary"],
+          "enum": ["primary", "secondary"]
+        }
+      }
+    }
+  },
+  {
+    "name": "BannerMainHome",
+    "schema": {
+      "title": "Banner Main Home",
+      "description": "Add a quick promotion with an image/action pair",
+      "type": "object",
+      "properties": {
+        "imageSrc": {
+          "type": "string",
+          "title": "Image",
+          "widget": {
+            "ui:widget": "image-uploader"
+          }
+        },
+        "imageAlt": {
+          "type": "string",
+          "title": "Alt text"
+        }
+      }
+    }
+  },
+  {
+    "name": "Shelf",
+    "schema": {
+      "title": "Shelf",
+      "description": "Displays a list of products in a carousel.",
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Shelf Title"
+        },
+        "searchParams": {
+          "type": "object",
+          "title": "Search parameters for Shelf",
+          "properties": {
+            "from": {
+              "type": "number",
+              "title": "from"
+            },
+            "to": {
+              "type": "number",
+              "title": "to"
+            },
+            "collection": {
+              "type": "string",
+              "title": "Collection"
+            },
+            "hideUnavailableItems": {
+              "default": true,
+              "type": "boolean",
+              "title": "Hide unavailable items"
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "RichText",
+    "schema": {
+      "title": "Rich Text",
+      "description": "Displays text written in Markdown.",
+      "type": "object",
+      "properties": {
+        "content": {
+          "type": "string",
+          "title": "Text",
+          "widget": {
+            "ui:widget": "draftjs-rich-text"
+          }
+        }
+      }
+    }
+  }
+]

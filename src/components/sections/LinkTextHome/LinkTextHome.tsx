@@ -3,8 +3,8 @@ import Icon from 'src/components/ui/Icon'
 import type { AnchorHTMLAttributes } from 'react'
 // import RegionalizationButton from 'src/components/regionalization/RegionalizationButton'
 import Link from 'src/components/ui/Link'
-import { mark } from 'src/sdk/tests/mark'
 
+import Section from '../Section'
 import collectionsLinks from './collectionsLinks.json'
 import styles from './linkstext.module.scss'
 
@@ -21,8 +21,7 @@ type CollectionLinks = {
 function LinkTextHome({ onClickLink, classes = '' }: LinkTextProps) {
   return (
     <nav className={`${styles.fslinkstext} ${classes}`}>
-      <div className="layout__content">
-        {/* <RegionalizationButton /> */}
+      <Section className="layout__section">
         <UIList data-fs-navlinks-list-linio>
           {collectionsLinks.map(({ href, name, icon }: CollectionLinks) => (
             <li key={name} data-fs-navlinks-list-item>
@@ -38,9 +37,9 @@ function LinkTextHome({ onClickLink, classes = '' }: LinkTextProps) {
             </li>
           ))}
         </UIList>
-      </div>
+      </Section>
     </nav>
   )
 }
 
-export default mark(LinkTextHome)
+export default LinkTextHome

@@ -83,7 +83,12 @@ function Page(props: Props) {
         classBanner="banner-cmr"
       />
       <SliderHome
-        url="https://itglobers.vtexassets.com/arquivos/slaider-dtos_home-linio-1.jpg"
+        url={[
+          'https://itglobers.vtexassets.com/arquivos/slaider-dtos_home-linio-1.jpg',
+          'https://itglobers.vtexassets.com/arquivos/slaider-dtos_home-linio-2.jpg',
+          'https://itglobers.vtexassets.com/arquivos/slaider-dtos_home-linio-3.jpg',
+          'https://itglobers.vtexassets.com/arquivos/slaider-dtos_home-linio-4.jpg',
+        ]}
         alt="slider principal del home"
         classSlider="slider-ppal"
       />

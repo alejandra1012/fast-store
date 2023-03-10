@@ -77,7 +77,9 @@ function Page(props: Props) {
       <RenderPageSections sections={cmsHome?.sections} />
       <LinkTextHome />
       <BannerHome
-        url="https://itglobers.vtexassets.com/arquivos/banner-cmr_home-linio.jpg"
+        url={[
+          'https://itglobers.vtexassets.com/arquivos/banner-cmr_home-linio.jpg',
+        ]}
         href="/"
         alt="Banner ppal del home"
         classBanner="banner-cmr"
@@ -92,6 +94,71 @@ function Page(props: Props) {
         alt="slider principal del home"
         classSlider="slider-ppal"
       />
+      <BannerHome
+        url={[
+          'https://itglobers.vtexassets.com/arquivos/banner-categorias_home-linio-1.jpg',
+          'https://itglobers.vtexassets.com/arquivos/banner-categorias_home-linio-2.jpg',
+          'https://itglobers.vtexassets.com/arquivos/banner-categorias_home-linio-3.jpg',
+          'https://itglobers.vtexassets.com/arquivos/banner-categorias_home-linio-4.jpg',
+          'https://itglobers.vtexassets.com/arquivos/banner-categorias_home-linio-5.jpg',
+          'https://itglobers.vtexassets.com/arquivos/banner-categorias_home-linio-6.jpg',
+        ]}
+        href="/"
+        alt="Banner de categorias"
+        classBanner="banner-categorias-home"
+      />
+      <BannerHome
+        text="OFERTAS CYBERDAYS"
+        url={[
+          'https://itglobers.vtexassets.com/arquivos/banner-ofertas-cyberdays-linio-1.png',
+          'https://itglobers.vtexassets.com/arquivos/banner-ofertas-cyberdays-linio-2.png',
+          'https://itglobers.vtexassets.com/arquivos/banner-ofertas-cyberdays-linio-3.png',
+          'https://itglobers.vtexassets.com/arquivos/banner-ofertas-cyberdays-linio-4.png',
+          'https://itglobers.vtexassets.com/arquivos/banner-ofertas-cyberdays-linio-5.png',
+          'https://itglobers.vtexassets.com/arquivos/banner-ofertas-cyberdays-linio-6.png',
+        ]}
+        href="/"
+        alt="Banner Ofertas cyberdays"
+        classBanner="banner-ofertas-cyberdays"
+      />
+      <BannerHome
+        url={[
+          'https://itglobers.vtexassets.com/arquivos/banner2-ofertas-cyberdays-linio-1.png',
+          'https://itglobers.vtexassets.com/arquivos/banner2-ofertas-cyberdays-linio-2.png',
+          'https://itglobers.vtexassets.com/arquivos/banner2-ofertas-cyberdays-linio-3.png',
+        ]}
+        href="/"
+        alt="Banner 2 Ofertas cyberdays"
+        classBanner="Banner 2 Ofertas cyberdays"
+      />
+      <BannerHome
+        url={[
+          'https://itglobers.vtexassets.com/arquivos/banner-dtos_home-linio-1.jpg',
+          'https://itglobers.vtexassets.com/arquivos/banner-dtos_home-linio-2.jpg',
+          'https://itglobers.vtexassets.com/arquivos/banner-dtos_home-linio-3.jpg',
+        ]}
+        href="/"
+        alt="Banner Descuentos"
+        classBanner="banner-descuentos-home"
+      />
+      {/* <SliderHome
+        url={[
+          'https://itglobers.vtexassets.com/arquivos/slider2-dtos_home-linio-1.png',
+          'https://itglobers.vtexassets.com/arquivos/slider2-dtos_home-linio-2.png',
+          'https://itglobers.vtexassets.com/arquivos/slider2-dtos_home-linio-3.png',
+          'https://itglobers.vtexassets.com/arquivos/slider2-dtos_home-linio-4.png',
+          'https://itglobers.vtexassets.com/arquivos/slider2-dtos_home-linio-5.png',
+          'https://itglobers.vtexassets.com/arquivos/slider2-dtos_home-linio-6.png',
+          'https://itglobers.vtexassets.com/arquivos/slider2-dtos_home-linio-7.png',
+          'https://itglobers.vtexassets.com/arquivos/slider2-dtos_home-linio-8.png',
+          'https://itglobers.vtexassets.com/arquivos/slider2-dtos_home-linio-9.png',
+          'https://itglobers.vtexassets.com/arquivos/slider2-dtos_home-linio-10.png',
+          'https://itglobers.vtexassets.com/arquivos/slider2-dtos_home-linio-11.png',
+          'https://itglobers.vtexassets.com/arquivos/slider2-dtos_home-linio-12.png',
+        ]}
+        alt="slider principal del home"
+        classSlider="slider-ppal"
+      /> */}
       <Newsletter
         title="Get News and Special Offers!"
         description="Receive our news and promotions in advance. Enjoy and get 10% off your first purchase. For more information click here."

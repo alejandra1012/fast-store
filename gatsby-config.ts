@@ -118,8 +118,8 @@ const gatsbyConfig: GatsbyConfig = {
     {
       resolve: '@vtex/gatsby-source-cms',
       options: {
-        workspace: 'master',
-        tenant: 'itglobers',
+        workspace: 'testfaststore',
+        tenant: config.api.storeId,
       },
     },
   ],

@@ -1,5 +1,5 @@
-import { Carousel } from '@faststore/ui'
 import type { ReactNode } from 'react'
+import { Carousel } from '@faststore/ui'
 
 import style from './sliderhome.module.scss'
 
@@ -55,7 +55,11 @@ function Sliderhome({
 }: SliderHomeProps) {
   return (
     <div className={`${style.fsSliderHome}`}>
-      <Carousel transition={transition} controls={controls}>
+      <Carousel
+        transition={transition}
+        controls={controls}
+        // itemsPerPage={itemsPerPage}
+      >
         {url.map((imageUrl, index) => (
           <img
             key={index}

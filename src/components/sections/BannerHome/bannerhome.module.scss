@@ -1,14 +1,15 @@
 @import "src/styles/scaffold";
 
-.fs-banner-home{
-   margin-top: 12px;
-   margin-bottom: 12px;
+.fs-banner-home {
+  margin-top: 12px;
+  margin-bottom: 12px;
 
-  [data-banner-image]{
-    img{
-      width: 100%;
-    }
-
+  //  &[data-fs-banner-home="banner-cmr"]{
+  // img{ width: 100%;}
+  //  }
+  [data-fs-banner-home="banner-categorias-home"] {
+    display: flex;
+    column-gap: 10px;
   }
 
   // @include media ("<=phonemid"){
@@ -19,7 +20,4 @@
   //     }
   //   }
   // }
-
 }
-
-

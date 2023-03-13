@@ -13,7 +13,8 @@ import LinkTextHome from 'src/components/sections/LinkTextHome/LinkTextHome'
 import BannerHome from 'src/components/sections/BannerHome'
 import { useSession } from 'src/sdk/session'
 import Newsletter from 'src/components/sections/Newsletter'
-import SliderHome from 'src/components/sections/sliderHome'
+import SliderHome from 'src/components/sections/SliderHome'
+import SliderReact from 'src/components/sections/SliderHome/SliderReact'
 
 export type Props = PageProps<
   HomePageQueryQuery,
@@ -141,7 +142,10 @@ function Page(props: Props) {
         alt="Banner Descuentos"
         classBanner="banner-descuentos-home"
       />
-      {/* <SliderHome
+      <SliderReact
+        text="TIENDAS OFICIALES"
+        href="/Ver más"
+        text2="Ver más"
         url={[
           'https://itglobers.vtexassets.com/arquivos/slider2-dtos_home-linio-1.png',
           'https://itglobers.vtexassets.com/arquivos/slider2-dtos_home-linio-2.png',
@@ -156,9 +160,9 @@ function Page(props: Props) {
           'https://itglobers.vtexassets.com/arquivos/slider2-dtos_home-linio-11.png',
           'https://itglobers.vtexassets.com/arquivos/slider2-dtos_home-linio-12.png',
         ]}
-        alt="slider principal del home"
-        classSlider="slider-ppal"
-      /> */}
+        alt="slider dtos del home"
+        classSlick="slick-dtos" // classSlider="slider-ppal"
+      />
       <Newsletter
         title="Get News and Special Offers!"
         description="Receive our news and promotions in advance. Enjoy and get 10% off your first purchase. For more information click here."

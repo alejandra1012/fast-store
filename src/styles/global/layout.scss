@@ -17,10 +17,10 @@ main,
 .layout__main {
   display: flex;
   flex-wrap: wrap;
-  background: var(--fs-body-bkg);
   padding: 5vh 7vw;
+  background: var(--fs-body-bkg);
 
-  @include media("<=laptop"){
+  @include media("<=laptop") {
     padding: 5vh 8px;
   }
 }
@@ -37,35 +37,32 @@ main,
 
 .layout__content-full {
   width: 100%;
-  padding-top: var(--fs-spacing-4);
-  padding-bottom: var(--fs-spacing-4);
+  padding: var(--fs-spacing-4) 0 var(--fs-spacing-4) 0;
 
   @include media(">=notebook") {
-    padding-top: var(--fs-grid-padding);
-    padding-bottom: var(--fs-grid-padding);
-      padding-left: 7vw;
-      padding-right: 7vw;
-
+    padding: var(--fs-grid-padding) 7vw var(--fs-grid-padding) 7vw;
   }
 }
 
 .layout__content {
   box-sizing: border-box;
   width: 100%;
+
   // max-width: var(--fs-grid-breakpoint-notebook);
   padding-right: var(--fs-grid-padding);
   padding-left: var(--fs-grid-padding);
   margin-right: auto;
   margin-left: auto;
-  @include media(">=notebook") {
-      padding-left: 0;
-      padding-right: 0;
 
+  @include media(">=notebook") {
+    padding-right: 0;
+    padding-left: 0;
   }
 }
-.layout__content :global(.label__cart){
-color: #fff;
-}
+
+// .layout__content :global(.label__cart) {
+//   color: #fff;
+// }
 
 .no-scroll {
   overflow: hidden;
@@ -94,20 +91,20 @@ color: #fff;
   height: 100%;
   object-fit: cover;
 
-  &[data-fs-footer-apps]{
+  &[data-fs-footer-apps] {
     width: 125px;
     height: 37px;
   }
-
 }
-[data-fs-footer-sic]{
+
+[data-fs-footer-sic] {
   display: flex;
   justify-content: center;
-  padding-top: 50px;
-  max-width: 100%;
   width: 200%;
+  max-width: 100%;
+  padding-top: 50px;
 
-  @include media("<notebook"){
+  @include media("<notebook") {
     padding-top: 40px;
   }
 }

@@ -4,7 +4,13 @@
   width: 100%;
 
   .text__title-section {
+    margin-top: 40px;
     margin-bottom: var(--fs-spacing-3);
+    font-family: Arial, Roboto, -apple-system, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #333;
   }
 }
 
@@ -12,5 +18,7 @@
   padding-top: var(--fs-spacing-5);
   border-top: var(--fs-border-width) solid var(--fs-border-color-light);
 
-  @include media(">=notebook") { padding-top: var(--fs-spacing-9); }
+  @include media(">=notebook") {
+    padding-top: var(--fs-spacing-9);
+  }
 }

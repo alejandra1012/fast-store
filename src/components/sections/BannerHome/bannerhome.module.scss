@@ -4,20 +4,86 @@
   margin-top: 12px;
   margin-bottom: 12px;
 
-  //  &[data-fs-banner-home="banner-cmr"]{
-  // img{ width: 100%;}
-  //  }
-  [data-fs-banner-home="banner-categorias-home"] {
+  [data-fs-banner-home="banner-tegnologia-portable"] {
     display: flex;
     column-gap: 10px;
+    padding-bottom: 16px;
+    font-family: Arial, Roboto, -apple-system, Helvetica, sans-serif;
+    font-weight: 700;
+    line-height: 20px;
+    color: #333;
+
+    @include media("<=phonemid") {
+      flex-direction: column;
+    }
+
+    img {
+      width: 100%;
+    }
   }
 
-  // @include media ("<=phonemid"){
-  //   [data-banner-image]{
-  //     img{
-  //       width: 100%;
-  //       height: auto;
-  //     }
-  //   }
-  // }
+  [data-fs-banner-home="banner-medio-cmr"] {
+    img {
+      width: 100%;
+    }
+  }
+
+  [data-fs-banner-home="banner-moda-belleza-home"] {
+    display: flex;
+    column-gap: 10px;
+    padding-bottom: 16px;
+    font-family: Arial, Roboto, -apple-system, Helvetica, sans-serif;
+    font-weight: 700;
+    line-height: 20px;
+    color: #333;
+  }
+
+  [data-fs-banner-home="banner-banco-falabella-home"] {
+    padding-bottom: 16px;
+    font-family: Arial, Roboto, -apple-system, Helvetica, sans-serif;
+    font-weight: 700;
+    line-height: 20px;
+    color: #333;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &[data-fs-banner-home="banner-cmr"] {
+    img {
+      width: 100%;
+    }
+  }
+
+  [data-fs-banner-home="banner-categorias-home"] {
+    display: flex;
+    column-gap: 5px;
+    justify-content: center;
+
+    @include media("<=laptop") {
+      overflow: scroll;
+    }
+  }
+
+  [data-fs-banner-home="banner-descuentos-home"] {
+    display: flex;
+    justify-content: space-between;
+
+    @include media("<=phonemid") {
+      flex-direction: column;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    @include media("<=laptop") {
+      column-gap: 8px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
 }

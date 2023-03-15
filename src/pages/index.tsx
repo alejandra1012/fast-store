@@ -12,9 +12,9 @@ import type { ContentData } from '@vtex/client-cms'
 import LinkTextHome from 'src/components/sections/LinkTextHome/LinkTextHome'
 import BannerHome from 'src/components/sections/BannerHome'
 import { useSession } from 'src/sdk/session'
-import Newsletter from 'src/components/sections/Newsletter'
 import SliderHome from 'src/components/sections/SliderHome'
 import SliderReact from 'src/components/sections/SliderHome/SliderReact'
+import ProductShelf from 'src/components/sections/ProductShelf'
 
 export type Props = PageProps<
   HomePageQueryQuery,
@@ -35,8 +35,7 @@ function Page(props: Props) {
   const siteUrl = `${site?.siteMetadata?.siteUrl}`
 
   return (
-    <>
-      {/* SEO */}
+    <div className="home">
       <GatsbySeo
         title={title}
         description={site?.siteMetadata?.description ?? ''}
@@ -62,7 +61,6 @@ function Page(props: Props) {
           },
         }}
       />
-
       {/*
         WARNING: Do not import or render components from any
         other folder than '../components/sections' in here.
@@ -74,12 +72,16 @@ function Page(props: Props) {
         If needed, wrap your component in a <Section /> component
         (not the HTML tag) before rendering it here.
       */}
-      {console.log('index', cmsHome)}
       <RenderPageSections sections={cmsHome?.sections} />
       <LinkTextHome />
       <BannerHome
         url={[
-          'https://itglobers.vtexassets.com/arquivos/banner-cmr_home-linio.jpg',
+          {
+            desktop:
+              'https://itglobers.vtexassets.com/arquivos/banner-cmr_home-linio.jpg',
+            phone:
+              'https://itglobers.vtexassets.com/arquivos/banner-cmr_home-linio-mobile.png',
+          },
         ]}
         href="/"
         alt="Banner ppal del home"
@@ -97,51 +99,105 @@ function Page(props: Props) {
       />
       <BannerHome
         url={[
-          'https://itglobers.vtexassets.com/arquivos/banner-categorias_home-linio-1.jpg',
-          'https://itglobers.vtexassets.com/arquivos/banner-categorias_home-linio-2.jpg',
-          'https://itglobers.vtexassets.com/arquivos/banner-categorias_home-linio-3.jpg',
-          'https://itglobers.vtexassets.com/arquivos/banner-categorias_home-linio-4.jpg',
-          'https://itglobers.vtexassets.com/arquivos/banner-categorias_home-linio-5.jpg',
-          'https://itglobers.vtexassets.com/arquivos/banner-categorias_home-linio-6.jpg',
+          {
+            desktop:
+              'https://itglobers.vtexassets.com/arquivos/banner-categorias_home-linio-1.jpg',
+          },
+          {
+            desktop:
+              'https://itglobers.vtexassets.com/arquivos/banner-categorias_home-linio-2.jpg',
+          },
+          {
+            desktop:
+              'https://itglobers.vtexassets.com/arquivos/banner-categorias_home-linio-3.jpg',
+          },
+          {
+            desktop:
+              'https://itglobers.vtexassets.com/arquivos/banner-categorias_home-linio-4.jpg',
+          },
+          {
+            desktop:
+              'https://itglobers.vtexassets.com/arquivos/banner-categorias_home-linio-5.jpg',
+          },
+          {
+            desktop:
+              'https://itglobers.vtexassets.com/arquivos/banner-categorias_home-linio-6.jpg',
+          },
         ]}
         href="/"
         alt="Banner de categorias"
         classBanner="banner-categorias-home"
       />
+      <ProductShelf title="RECOMENDADOS PARA TI" term="camisa" />
+
       <BannerHome
-        text="OFERTAS CYBERDAYS"
+        text="TECNOLOGÍA PORTABLE"
         url={[
-          'https://itglobers.vtexassets.com/arquivos/banner-ofertas-cyberdays-linio-1.png',
-          'https://itglobers.vtexassets.com/arquivos/banner-ofertas-cyberdays-linio-2.png',
-          'https://itglobers.vtexassets.com/arquivos/banner-ofertas-cyberdays-linio-3.png',
-          'https://itglobers.vtexassets.com/arquivos/banner-ofertas-cyberdays-linio-4.png',
-          'https://itglobers.vtexassets.com/arquivos/banner-ofertas-cyberdays-linio-5.png',
-          'https://itglobers.vtexassets.com/arquivos/banner-ofertas-cyberdays-linio-6.png',
+          {
+            desktop:
+              'https://itglobers.vtexassets.com/arquivos/banner-tegnologia-portable_linio-1.png',
+          },
+          {
+            desktop:
+              'https://itglobers.vtexassets.com/arquivos/banner-tegnologia-portable_linio-2.png',
+          },
+          {
+            desktop:
+              'https://itglobers.vtexassets.com/arquivos/banner-tegnologia-portable_linio-3.png',
+          },
         ]}
         href="/"
-        alt="Banner Ofertas cyberdays"
-        classBanner="banner-ofertas-cyberdays"
+        alt="Banner Tegnologia Portable"
+        classBanner="banner-tegnologia-portable"
       />
+      {/* <div className="display-mobile">
+        <BannerHome
+          text="TECNOLOGÍA PORTABLE"
+          url={[
+            {
+              desktop:
+                'https://itglobers.vtexassets.com/arquivos/banner-tegnologia-portable_linio-mobile.png',
+            },
+          ]}
+          href="/"
+          alt="Banner Tegnologia Portable"
+          classBanner="banner-tegnologia-portable"
+        />
+      </div> */}
       <BannerHome
         url={[
-          'https://itglobers.vtexassets.com/arquivos/banner2-ofertas-cyberdays-linio-1.png',
-          'https://itglobers.vtexassets.com/arquivos/banner2-ofertas-cyberdays-linio-2.png',
-          'https://itglobers.vtexassets.com/arquivos/banner2-ofertas-cyberdays-linio-3.png',
+          {
+            desktop:
+              'https://itglobers.vtexassets.com/arquivos/banner-medio-cmr_home-linio.png',
+            phone:
+              'https://itglobers.vtexassets.com/arquivos/banner-cmr_home-linio-mobile.png',
+          },
         ]}
         href="/"
-        alt="Banner 2 Ofertas cyberdays"
-        classBanner="Banner 2 Ofertas cyberdays"
+        alt="Banner medio cmr"
+        classBanner="banner-medio-cmr"
       />
+      <ProductShelf title="FAVORITOS EN TECNOLOGÍA" term="celular" />
       <BannerHome
         url={[
-          'https://itglobers.vtexassets.com/arquivos/banner-dtos_home-linio-1.jpg',
-          'https://itglobers.vtexassets.com/arquivos/banner-dtos_home-linio-2.jpg',
-          'https://itglobers.vtexassets.com/arquivos/banner-dtos_home-linio-3.jpg',
+          {
+            desktop:
+              'https://itglobers.vtexassets.com/arquivos/banner-dtos_home-linio-1.png',
+          },
+          {
+            desktop:
+              'https://itglobers.vtexassets.com/arquivos/banner-dtos_home-linio-2.png',
+          },
+          {
+            desktop:
+              'https://itglobers.vtexassets.com/arquivos/banner-dtos_home-linio-3.png',
+          },
         ]}
         href="/"
         alt="Banner Descuentos"
         classBanner="banner-descuentos-home"
       />
+      <ProductShelf title="OFERTAS PARA TU HOGAR" term="hogar" />
       <SliderReact
         text="TIENDAS OFICIALES"
         href="/Ver más"
@@ -161,13 +217,65 @@ function Page(props: Props) {
           'https://itglobers.vtexassets.com/arquivos/slider2-dtos_home-linio-12.png',
         ]}
         alt="slider dtos del home"
-        classSlick="slick-dtos" // classSlider="slider-ppal"
+        classSlick="slick-dtos"
       />
-      <Newsletter
-        title="Get News and Special Offers!"
-        description="Receive our news and promotions in advance. Enjoy and get 10% off your first purchase. For more information click here."
+      <ProductShelf title="RECOMENDADOS EN AUDIO Y CÓMPUTO" term="computador" />
+      <div className="hidden-mobile">
+        <BannerHome
+          text="MODA Y BELLEZA PARA TUS DÍAS"
+          url={[
+            {
+              desktop:
+                'https://itglobers.vtexassets.com/arquivos/banner-moda_belleza-home-1.png',
+            },
+            {
+              desktop:
+                'https://itglobers.vtexassets.com/arquivos/banner-moda_belleza-home-2.png',
+            },
+            {
+              desktop:
+                'https://itglobers.vtexassets.com/arquivos/banner-moda_belleza-home-3.png',
+            },
+          ]}
+          href="/"
+          alt="Banner Moda y Belleza"
+          classBanner="banner-moda-belleza-desktop"
+        />
+      </div>
+      <div className="display-mobile">
+        <BannerHome
+          text="MODA Y BELLEZA PARA TUS DÍAS"
+          url={[
+            {
+              desktop:
+                'https://itglobers.vteximg.com.br/arquivos/banner-moda_belleza-home-mobile.png',
+            },
+          ]}
+          href="/"
+          alt="Banner Moda y Belleza"
+          classBanner="banner-moda-belleza-home"
+        />
+      </div>
+      <ProductShelf
+        title="EQUIPOS DEPORTIVOS Y DE OUTDOOR Ver más"
+        term="deportes"
       />
-    </>
+      <ProductShelf title="LO MÁS DESTACADO DE LA SEMANA Ver más" term="ropa" />
+      <BannerHome
+        text="BANCO FALABELLA"
+        url={[
+          {
+            desktop:
+              'https://itglobers.vtexassets.com/arquivos/banner-banco-falabella_home-final.jpg',
+            phone:
+              'https://itglobers.vtexassets.com/arquivos/banner-banco-falabella_home-final-mobile.png',
+          },
+        ]}
+        href="/"
+        alt="Banner final Banco Falabella"
+        classBanner="banner-banco-falabella-home"
+      />
+    </div>
   )
 }
 

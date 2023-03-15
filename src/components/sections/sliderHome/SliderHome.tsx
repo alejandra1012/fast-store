@@ -56,9 +56,9 @@ function Sliderhome({
   return (
     <div className={`${style.fsSliderHome}`}>
       <Carousel
+        data-fs-slider-home={classSlider}
         transition={transition}
         controls={controls}
-        // itemsPerPage={itemsPerPage}
       >
         {url.map((imageUrl, index) => (
           <img

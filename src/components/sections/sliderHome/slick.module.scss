@@ -1,4 +1,11 @@
 .fs-slider-react {
   width: 100%;
   max-width: 86vw;
+
+  &[data-fs-slick-home="slick-dtos"] {
+    h2 {
+      display: flex;
+      column-gap: 5px;
+    }
+  }
 }

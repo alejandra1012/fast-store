@@ -13,7 +13,14 @@ type SliderReactProps = {
   classSlick?: string
 }
 
-const SliderReact = ({ url, text, alt, href, text2 }: SliderReactProps) => {
+const SliderReact = ({
+  url,
+  text,
+  alt,
+  href,
+  text2,
+  classSlick,
+}: SliderReactProps) => {
   const settings = {
     dots: false,
     infinite: false,
@@ -23,15 +30,15 @@ const SliderReact = ({ url, text, alt, href, text2 }: SliderReactProps) => {
   }
 
   return (
-    <div className={style.fsSliderReact}>
-      <h2>
+    <div className={style.fsSliderReact} data-fs-slick-home={classSlick}>
+      <h2 className={classSlick}>
         {text}
-        <a href={href}>
+        <a href={href} data-fs-slick-home={classSlick}>
           <h2>{text2}</h2>
         </a>
       </h2>
 
-      <Slider {...settings}>
+      <Slider {...settings} data-fs-slick-home={classSlick}>
         {url.map((img, index) => (
           <div key={index}>
             <img src={img} alt={alt} />

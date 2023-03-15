@@ -3,6 +3,7 @@ import {
   PaymentMethods as UIPaymentMethods,
 } from '@faststore/ui'
 import IncentivesFooter from 'src/components/sections/Incentives/IncentivesFooter'
+import Newsletter from 'src/components/sections/Newsletter'
 import Icon from 'src/components/ui/Icon'
 import { Image } from 'src/components/ui/Image'
 import Link from 'src/components/ui/Link'
@@ -40,6 +41,8 @@ export function Footer({
       data-fs-footer-payment-methods={sectionPaymentMethods}
       className={`${styles.fsFooter} layout__content-full`}
     >
+      <Newsletter title={undefined} />
+
       {sectionIncentives && <IncentivesFooter />}
 
       <div data-fs-footer-nav className="layout__content">

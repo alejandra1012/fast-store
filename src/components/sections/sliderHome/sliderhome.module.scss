@@ -1,11 +1,23 @@
+@import "src/styles/scaffold";
+
 .fs-slider-home {
   width: 100%;
+
+  [data-fs-slider-home="slider-ppal"] {
+    @include media("<=phonemid") {
+      width: 270%;
+    }
+  }
 
   [data-carousel-controls="true"] {
     position: relative;
     bottom: 158px;
     display: flex;
     justify-content: space-between;
+
+    @include media(">phonemid", "<=tablet") {
+      bottom: 180px;
+    }
 
     [data-fs-button="true"] {
       width: 50px;
@@ -15,6 +27,10 @@
       border: none;
       border-radius: 100px;
       box-shadow: 0 0 3px 0 rgb(169 169 169 / 70%);
+
+      @include media("<=phonemid") {
+        display: none;
+      }
     }
 
     [data-arrow="left"] {
@@ -47,6 +63,11 @@
     left: 45%;
     width: 10%;
     margin-right: 0;
+
+    @include media("<=phonemid") {
+      bottom: 20px;
+      left: 40%;
+    }
 
     [data-fs-bullets] {
       display: flex;

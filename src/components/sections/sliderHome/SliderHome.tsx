@@ -7,7 +7,6 @@ type SliderHomeProps = {
   url: string[]
   alt: string
   classSlider: string
-  className?: string
   /**
    * Whether or not the Carousel is infinite slide/scroll. Only for the `slide` variant.
    * @default true
@@ -63,7 +62,7 @@ function Sliderhome({
         {url.map((imageUrl, index) => (
           <img
             key={index}
-            className={classSlider}
+            data-fs-slider-homey={classSlider}
             src={imageUrl}
             alt={alt}
             width="100%"

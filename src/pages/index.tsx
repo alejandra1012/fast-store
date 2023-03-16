@@ -80,23 +80,51 @@ function Page(props: Props) {
             desktop:
               'https://itglobers.vtexassets.com/arquivos/banner-cmr_home-linio.jpg',
             phone:
-              'https://itglobers.vtexassets.com/arquivos/banner-cmr_home-linio-mobile.png',
+              'https://itglobers.vteximg.com.br/arquivos/banner-cmr_home-linio-mobile.png',
+            tablet:
+              'https://itglobers.vteximg.com.br/arquivos/banner-cmr_home-linio-tablet.png',
           },
         ]}
         href="/"
         alt="Banner ppal del home"
         classBanner="banner-cmr"
       />
-      <SliderHome
-        url={[
-          'https://itglobers.vtexassets.com/arquivos/slaider-dtos_home-linio-1.jpg',
-          'https://itglobers.vtexassets.com/arquivos/slaider-dtos_home-linio-2.jpg',
-          'https://itglobers.vtexassets.com/arquivos/slaider-dtos_home-linio-3.jpg',
-          'https://itglobers.vtexassets.com/arquivos/slaider-dtos_home-linio-4.jpg',
-        ]}
-        alt="slider principal del home"
-        classSlider="slider-ppal"
-      />
+      <div className="hidden-mobile">
+        <SliderHome
+          url={[
+            'https://itglobers.vtexassets.com/arquivos/slaider-dtos_home-linio-1.jpg',
+            'https://itglobers.vtexassets.com/arquivos/slaider-dtos_home-linio-2.jpg',
+            'https://itglobers.vtexassets.com/arquivos/slaider-dtos_home-linio-3.jpg',
+            'https://itglobers.vtexassets.com/arquivos/slaider-dtos_home-linio-4.jpg',
+          ]}
+          alt="slider principal del home"
+          classSlider="slider-ppal"
+        />
+      </div>
+      <div className="display-phonemid">
+        <SliderHome
+          url={[
+            'https://itglobers.vtexassets.com/arquivos/slider-dtos_home-linio-mobile-1.png',
+            'https://itglobers.vtexassets.com/arquivos/slider-dtos_home-linio-mobile-2.png',
+            'https://itglobers.vtexassets.com/arquivos/slider-dtos_home-linio-mobile-3.png',
+            'https://itglobers.vtexassets.com/arquivos/slider-dtos_home-linio-mobile-4.png',
+          ]}
+          alt="slider principal del home"
+          classSlider="slider-ppal"
+        />
+      </div>
+      <div className="display-tablet hidden-phonemid">
+        <SliderHome
+          url={[
+            'https://itglobers.vtexassets.com/arquivos/slider-dtos_home-linio-tablet-1.png',
+            'https://itglobers.vtexassets.com/arquivos/slider-dtos_home-linio-tablet-2.png',
+            'https://itglobers.vtexassets.com/arquivos/slider-dtos_home-linio-tablet-3.png',
+            'https://itglobers.vtexassets.com/arquivos/slider-dtos_home-linio-tablet-4.png',
+          ]}
+          alt="slider principal del home"
+          classSlider="slider-ppal"
+        />
+      </div>
       <BannerHome
         url={[
           {
@@ -129,7 +157,6 @@ function Page(props: Props) {
         classBanner="banner-categorias-home"
       />
       <ProductShelf title="RECOMENDADOS PARA TI" term="camisa" />
-
       <BannerHome
         text="TECNOLOGÍA PORTABLE"
         url={[
@@ -170,7 +197,9 @@ function Page(props: Props) {
             desktop:
               'https://itglobers.vtexassets.com/arquivos/banner-medio-cmr_home-linio.png',
             phone:
-              'https://itglobers.vtexassets.com/arquivos/banner-cmr_home-linio-mobile.png',
+              'https://itglobers.vteximg.com.br/arquivos/banner-cmr_home-linio-mobile.png',
+            tablet:
+              'https://itglobers.vteximg.com.br/arquivos/banner-cmr_home-linio-tablet.png',
           },
         ]}
         href="/"
@@ -239,7 +268,7 @@ function Page(props: Props) {
           ]}
           href="/"
           alt="Banner Moda y Belleza"
-          classBanner="banner-moda-belleza-desktop"
+          classBanner="banner-moda-belleza-home"
         />
       </div>
       <div className="display-mobile">

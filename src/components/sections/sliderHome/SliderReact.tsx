@@ -27,21 +27,55 @@ const SliderReact = ({
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 4,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          initialSlide: 2,
+        },
+      },
+      // {
+      //   breakpoint: 900,
+      //   settings: {
+      //     slidesToShow: 2,
+      //     slidesToScroll: 2,
+      //   },
+      // },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          // centerMode: true,
+          // initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 425,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   }
 
   return (
     <div className={style.fsSliderReact} data-fs-slick-home={classSlick}>
-      <h2 className={classSlick}>
+      <h2 data-fs-slick-home={classSlick}>
         {text}
         <a href={href} data-fs-slick-home={classSlick}>
           <h2>{text2}</h2>
         </a>
       </h2>
 
-      <Slider {...settings} data-fs-slick-home={classSlick}>
+      <Slider {...settings}>
         {url.map((img, index) => (
-          <div key={index}>
-            <img src={img} alt={alt} />
+          <div data-fs-slick-home={classSlick} key={index}>
+            <img data-fs-slick-home={classSlick} src={img} alt={alt} />
           </div>
         ))}
       </Slider>

@@ -177,20 +177,6 @@ function Page(props: Props) {
         alt="Banner Tegnologia Portable"
         classBanner="banner-tegnologia-portable"
       />
-      {/* <div className="display-mobile">
-        <BannerHome
-          text="TECNOLOGÍA PORTABLE"
-          url={[
-            {
-              desktop:
-                'https://itglobers.vtexassets.com/arquivos/banner-tegnologia-portable_linio-mobile.png',
-            },
-          ]}
-          href="/"
-          alt="Banner Tegnologia Portable"
-          classBanner="banner-tegnologia-portable"
-        />
-      </div> */}
       <BannerHome
         url={[
           {

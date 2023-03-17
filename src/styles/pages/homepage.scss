@@ -4,3 +4,35 @@
 .home {
   width: 100%;
 }
+
+.slick-prev {
+  left: 12px !important; /* stylelint-disable-line declaration-no-important */
+}
+
+.slick-next {
+  right: 16px !important; /* stylelint-disable-line declaration-no-important */
+}
+
+.slick-prev::before,
+.slick-next::before {
+  font-family: monospace !important; /* stylelint-disable-line declaration-no-important */
+}
+
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  background: #fff !important; /* stylelint-disable-line declaration-no-important */
+}
+
+.slick-arrow::before {
+  color: #788195 !important; /* stylelint-disable-line declaration-no-important */
+}
+
+.slick-arrow.slick-prev.slick-disabled {
+  display: none !important; /* stylelint-disable-line declaration-no-important */
+}
+
+.slick-arrow.slick-next.slick-disabled {
+  display: none !important; /* stylelint-disable-line declaration-no-important */
+}

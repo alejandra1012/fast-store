@@ -1,11 +1,40 @@
+@import "src/styles/scaffold";
+
 .fs-slider-react {
   width: 100%;
   max-width: 86vw;
 
   &[data-fs-slick-home="slick-dtos"] {
+    font-family: Arial, Roboto, -apple-system, Helvetica, sans-serif;
+    font-weight: 700;
+    line-height: 20px;
+    color: #333;
+
     h2 {
       display: flex;
       column-gap: 5px;
+      margin-bottom: 16px;
+    }
+
+    a {
+      font-size: 14.4px;
+      font-weight: normal;
+      color: #f50;
+    }
+  }
+
+  button {
+    position: absolute;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    max-height: 100%;
+    background: #fff;
+    border-radius: 100px;
+    box-shadow: 0 0 3px 0 rgb(169 169 169 / 70%);
+
+    @include media("<=phonemid") {
+      display: none !important; /* stylelint-disable-line declaration-no-important */
     }
   }
 }

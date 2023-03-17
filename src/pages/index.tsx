@@ -78,7 +78,7 @@ function Page(props: Props) {
         url={[
           {
             desktop:
-              'https://itglobers.vtexassets.com/arquivos/banner-cmr_home-linio.jpg',
+              'https://itglobers.vtexassets.com/arquivos/banner-medio-cmr_home-linio.png',
             phone:
               'https://itglobers.vteximg.com.br/arquivos/banner-cmr_home-linio-mobile.png',
             tablet:
@@ -92,10 +92,10 @@ function Page(props: Props) {
       <div className="hidden-mobile">
         <SliderHome
           url={[
-            'https://itglobers.vtexassets.com/arquivos/slaider-dtos_home-linio-1.jpg',
-            'https://itglobers.vtexassets.com/arquivos/slaider-dtos_home-linio-2.jpg',
-            'https://itglobers.vtexassets.com/arquivos/slaider-dtos_home-linio-3.jpg',
-            'https://itglobers.vtexassets.com/arquivos/slaider-dtos_home-linio-4.jpg',
+            'https://itglobers.vtexassets.com/arquivos/slider-dtos_home-linio-1.png',
+            'https://itglobers.vtexassets.com/arquivos/slider-dtos_home-linio-2.png',
+            'https://itglobers.vtexassets.com/arquivos/slider-dtos_home-linio-3.png',
+            'https://itglobers.vtexassets.com/arquivos/slider-dtos_home-linio-4.png',
           ]}
           alt="slider principal del home"
           classSlider="slider-ppal"
@@ -235,12 +235,12 @@ function Page(props: Props) {
           'https://itglobers.vtexassets.com/arquivos/slider2-dtos_home-linio-1.png',
           'https://itglobers.vtexassets.com/arquivos/slider2-dtos_home-linio-2.png',
           'https://itglobers.vtexassets.com/arquivos/slider2-dtos_home-linio-3.png',
-          'https://itglobers.vtexassets.com/arquivos/slider2-dtos_home-linio-4.png',
-          'https://itglobers.vtexassets.com/arquivos/slider2-dtos_home-linio-5.png',
+          'https://itglobers.vteximg.com.br/arquivos/slider2-dtos_home-linio-4.png',
+          'https://itglobers.vteximg.com.br/arquivos/slider2-dtos_home-linio-5.png',
           'https://itglobers.vtexassets.com/arquivos/slider2-dtos_home-linio-6.png',
           'https://itglobers.vtexassets.com/arquivos/slider2-dtos_home-linio-7.png',
-          'https://itglobers.vtexassets.com/arquivos/slider2-dtos_home-linio-8.png',
-          'https://itglobers.vtexassets.com/arquivos/slider2-dtos_home-linio-9.png',
+          'https://itglobers.vteximg.com.br/arquivos/slider2-dtos_home-linio-8.png',
+          'https://itglobers.vteximg.com.br/arquivos/slider2-dtos_home-linio-9.png',
           'https://itglobers.vtexassets.com/arquivos/slider2-dtos_home-linio-10.png',
           'https://itglobers.vtexassets.com/arquivos/slider2-dtos_home-linio-11.png',
           'https://itglobers.vtexassets.com/arquivos/slider2-dtos_home-linio-12.png',
